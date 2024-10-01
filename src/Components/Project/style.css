@@ -38,11 +38,13 @@
   .left-column,
   .right-column {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    column-gap: 20px;
-    height: 1700px;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas, cada una con el mismo ancho */
+    grid-auto-rows: 1fr; /* Permite que cada fila se ajuste automáticamente, pero solo habrá una */
+    column-gap: 20px; /* Espacio entre cada columna */
+    height: auto; /* Ajusta la altura automáticamente al contenido */
   }
+  
+
 }
 
 .projects-element {
@@ -86,7 +88,29 @@
       border-radius: 20px;
       overflow: hidden;
     }
-
-   
   }
 }
+
+.projects-usedBy{
+    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 234px;
+    padding-top: 234px;
+    margin-bottom: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1304px;
+    width: calc(100%-48px);
+    position: relative;
+    color: #fff;
+
+    .projects-usedBy-copy{
+        margin-bottom: 0;
+        padding-left: 52px;
+        width: 390px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+  }

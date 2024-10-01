@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./style.css";
+import {gsap} from "gsap";
 
 const ImageElement = ({ src, alt }) => {
   return (
@@ -47,6 +48,48 @@ const ProjectsCollageContainer = ({ photos = [], videos = [] }) => {
       }
     }
   }
+
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".projects-collage", // El elemento que dispara la animación
+        start: "top 80%", // La animación comienza cuando el "top" del trigger alcanza el 80% de la pantalla
+        toggleActions: "play none none reverse", // Define cómo se comporta la animación
+      },
+      delay: 0.5,
+    });
+  
+    tl.fromTo(
+      ".projects-element",
+      { y: 300, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,
+      }
+    );
+  }, []);
+  
+  
+/* useEffect (() => {
+  const tl= gsap.timeline({
+    delay:0.5
+  })
+
+  tl.fromTo(
+    ".projects-element", 
+    { y: 300}, 
+    { y: 0, 
+      duration: 1, 
+      delay: function(index) {
+        return 0.2*index;
+  },
+}
+);
+}, []); */
+
 
   return (
     <div className='projects-collage'>

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.9.0",
     "@nextui-org/react": "^2.4.6",
     "@react-spring/web": "^9.7.4",
     "framer-motion": "^11.5.4",
@@ -23,7 +24,9 @@
     "react-parallax-tilt": "^1.7.238",
     "react-slick": "^0.30.2",
     "react-use-measure": "^2.1.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "three": "^0.169.0",
+    "three-stdlib": "^2.33.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

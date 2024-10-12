@@ -2,14 +2,16 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import imagen1 from "../../assets/photos/celu.png"
+import video1 from "../../assets/aun no/video1.webm";
+import video2 from "../../assets/aun no/video2.webm";
+import video3 from "../../assets/aun no/video3.webm";
+import "../Project/animation.css"
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   const quoteRef = useRef(null);
-  // Declaramos imageRefs como una referencia
-  const imageRefs = useRef([]);
+  // We don't need imageRefs for videos, so remove it
 
   useEffect(() => {
     // Divide el texto en palabras y caracteres
@@ -30,9 +32,9 @@ const Projects = () => {
     tl.from(chars, {
       opacity: 0,
       yPercent: 100,
-      duration: 0.4,
+      duration: 0.9,
       ease: "power2.out",
-      stagger: { amount: 0.3 },
+      stagger: { amount: 0.8 },
     });
 
     // Animación de salida: desplazar hacia abajo y desaparecer
@@ -44,23 +46,11 @@ const Projects = () => {
         gsap.to(chars, {
           opacity: 0,
           yPercent: 100,
-          duration: 0.2, // Reducido para transición más rápida
+          duration: 0.1, // Reducido para transición más rápida
           ease: "power1.in", // Easing más lineal
           stagger: { amount: 0.1 },
         });
       },
-    });
-
-    // Efecto de paralaje al mover el mouse (opcional)
-    imageRefs.current.forEach((image) => {
-      if (image) { // Evitamos errores si no hay imágenes cargadas
-        image.addEventListener("mousemove", (e) => {
-          gsap.to(image, {
-            x: e.clientX - window.innerWidth / 2,
-            y: e.clientY - window.innerHeight / 2,
-          });
-        });
-      }
     });
   }, []);
 
@@ -71,23 +61,29 @@ const Projects = () => {
         <h1 ref={quoteRef} className="text-7xl leading-loose text-center relative z-10">
           TRANSFORMAMOS LA GESTIÓN DE TU NEGOCIO CON SOLUCIONES DIGITALES EFICIENTES.
         </h1>
-        <img
-          ref={(el) => (imageRefs.current[0] = el)}
-          src={imagen1}
-          alt="Imagen 1"
-          className="absolute top-0 left-0 z-0"
+        <video
+          ref={(el) => (el.muted = true)} // Mute videos on load (optional)
+          autoPlay
+          loop
+          className="absolute top-5 left-20 z-0 object-cover size-52 slide-down"
+          src={video2}
+          alt="Video 1"
         />
-        <img
-          ref={(el) => (imageRefs.current[1] = el)}
-          src="ruta/a/tu/imagen2.jpg"
-          alt="Imagen 2"
-          className="absolute bottom-0 right-0 z-0"
+        <video
+          ref={(el) => (el.muted = true)} // Mute videos on load (optional)
+          autoPlay
+          loop
+          className="arriba absolute bottom-30 right-32 z-0 object-cover slide-up"
+          src={video1}
+          alt="Video 2"
         />
-        <img
-          ref={(el) => (imageRefs.current[2] = el)}
-          src="ruta/a/tu/imagen3.jpg"
-          alt="Imagen 3"
-          className="absolute top-50 left-50 z-0"
+        <video
+          ref={(el) => (el.muted = true)} // Mute videos on load (optional)
+          autoPlay
+          loop
+          className="absolute bottom-0 left-60 z-0 object-cover size-52 animation slide-infinite"
+          src={video3}
+          alt="Video 3"
         />
       </div>
     </div>

@@ -1,28 +1,49 @@
-import React from 'react';
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
+import React, { useState, useEffect } from 'react';
+import {
+  Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button,
+} from "@nextui-org/react";
 import logo_siacomsoft from "../assets/photos/logo_fondo_osc.png";
 
-
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Función para cambiar el estado de 'scrolled' al hacer scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) { // Cambiar '50' si quieres ajustar cuándo se aplica el blur
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const menuItems = [
     "Inicio",
-    "Proyectos",
-    "Cotizaciones",
-    "Contacto",
+    "Qué hacemos",
+    "Productos",
+    "Características",
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar
+      /* isBordered={scrolled}  */// Agrega borde solo cuando está scrolleado
+      className={`fixed w-full top-0 z-20 transition-colors duration-500 
+      }`}
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand>
-          <img src={logo_siacomsoft} alt="SiacomSoft Logo" className="h-8" />
-        </NavbarBrand>
+     
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
@@ -33,19 +54,22 @@ const Header = () => {
         </NavbarItem>
         <NavbarItem isActive>
           <Link className="text-zinc-50" href="#">
-            Proyectos
+            Qué hacemos
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link className="text-zinc-50" href="#">
-            Cotizaciones
+            Productos
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link className="text-zinc-50" href="#">
-            Contacto
+            Características
           </Link>
         </NavbarItem>
+        <Button radius="full" className="bg-gradient-to-tr from-pink-500 to-blue-500 text-white shadow-lg">
+          Button
+        </Button>
       </NavbarContent>
 
       <NavbarMenu>

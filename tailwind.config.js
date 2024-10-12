@@ -35,6 +35,7 @@ module.exports = {
       },
       fontFamily: {
         nunito: ["Nunito", "sans-serif"],
+        mate: ['Mate SC', 'serif'],
       },
 
       darkMode: "class",
@@ -46,3 +47,4 @@ module.exports = {
     },
   },
 };
+

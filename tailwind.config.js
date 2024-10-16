@@ -1,4 +1,3 @@
-// tailwind.config.js
 const { nextui } = require("@nextui-org/react");
 
 /** @type {import('tailwindcss').Config} */
@@ -24,26 +23,29 @@ module.exports = {
           800: "#002e62",
           900: "#001731",
         },
+        azul: {
+          950: "#01020c",
+        },
         zinc: {
           50: "#FAFAFA",
           100: "#F4F4F5",
           200: "#E4E4E7",
-
         },
         fuxia: "#fe00ff",
+      },
+      textShadow: {
+        'fuxia': '5px 5px 10px #fe00ff',
       },
       fontFamily: {
         nunito: ["Nunito", "sans-serif"],
         mate: ['Mate SC', 'serif'],
       },
-
-      darkMode: "class",
-      plugins: [
-        nextui({
-          addCommonColors: true,
-        }),
-      ],
     },
   },
+  plugins: [
+    nextui({
+      addCommonColors: true,
+    }),
+    require('tailwindcss-textshadow'), // Plugin de text-shadow
+  ],
 };
-

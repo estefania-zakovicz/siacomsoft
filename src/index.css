@@ -11,12 +11,12 @@
   font-family: "Nunito", sans-serif; /* Fuente base para todo */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Mate SC", serif; /* Cambia a Mate SC para encabezados */
-}
+/* h1, h2, h3, h4, h5, h6 {
+  font-family: "Mate SC", serif; 
+} */
 
 html.dark {
-  background-color: #000000f3;
+  background-color: rgb(4, 8, 21);
   color: #fff;
 }
 
@@ -31,4 +31,45 @@ html.dark {
 *::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: #114389;
+}
+
+
+/*ANIMACIÓN DE LOS TEXTOS DEL COMPONENTE HACEMOS*/
+
+@keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+    transform: translateZ(400px) translateY(-300px);
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+    transform: translateZ(0) translateY(0);
+  }
+}
+
+.tracking-in-contract-bck {
+  -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+          animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+
+@keyframes tilt-in-tr {
+  0% {
+    transform: rotateZ(45deg) translateX(300px) translateY(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(0deg) translateX(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+.tilt-in-tr {
+  -webkit-animation: tilt-in-tr 0.65s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: tilt-in-tr 0.65s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }

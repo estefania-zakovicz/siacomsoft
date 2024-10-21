@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Hero_animation from './Components/Hero/Hero_animation';
+import DynamicSection from './Components/Make/DynamicSection';
 import Programs from './Components/Project/Programs';
-// Asegúrate de que el componente Carousel esté en esta ruta
+
 
 const App = () => {
   const [isInView, setIsInView] = useState(false);
@@ -30,24 +31,8 @@ const App = () => {
   return (
     <div className="font-nunito">
       <Hero_animation />
-      <div ref={sectionRef} className="title text-center mt-20">
-        <span
-          className={`block text-7xl font-bold uppercase ${
-            isInView ? 'tracking-in-expand-fwd-top' : ''
-          }`}
-        >
-          Desarrollamos programas,<br />sitios webs y aplicaciones
-        </span>
-        <span
-          className={`block text-3xl font-bold uppercase mt-5 mb-20 relative text-fuxia ${
-            isInView ? 'text-focus-in' : ''
-          }`}
-        >
-          que simplifican la administración diaria de tu empresa
-        </span>
-      </div>
+      <DynamicSection />
       <Programs />
-      
     </div>
   );
 };

@@ -40,6 +40,7 @@ module.exports = {
         nunito: ["Nunito", "sans-serif"],
         mate: ['Mate SC', 'serif'],
       },
+      
     },
   },
   plugins: [

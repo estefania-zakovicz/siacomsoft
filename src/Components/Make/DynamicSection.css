@@ -1,89 +1,73 @@
-/* DynamicSection.css */
-@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
-body {
-  font-family: "Rowdies", sans-serif;
-}
-.dynamic-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: rgba(0, 0, 0, 0.4);
-}
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-.content {
-  position: relative;
-  z-index: 1;
-  white-space: nowrap;
-}
-.text-stroke {
-  color: transparent;
-  -webkit-text-stroke: 5px #fe00ff;
-  display: inline-block;
-  white-space: nowrap;
-  will-change: transform;
-}
-.text-slide {
-  position: relative;
-  display: inline-block;
-}
-@keyframes slide-right {
+/* Programas */
+@keyframes programas-animation {
   0% {
-    transform: translateX(-100%);
-    opacity: 1;
+    transform: translate(0, 0);
   }
-  50% {
-    transform: translateX(100%);
-    opacity: 1;
+  40% {
+    transform: translate(-100px, -100px);
+  }
+  70% {
+    transform: translate(100px, -100px);
   }
   100% {
-    transform: translateX(-100%);
-    opacity: 1;
+    transform: translate(0, 0);
   }
 }
-@keyframes slide-left {
+
+.animate-programas {
+  animation: programas-animation 8s infinite;
+}
+
+/* Sitios Webs*/
+@keyframes sitios-animation {
   0% {
-    transform: translateX(100%);
-    opacity: 1;
+    transform: translate(0, 0);
   }
-  50% {
-    transform: translateX(-100%);
-    opacity: 1;
+  40% {
+    transform: translate(100px, -100px);
+  }
+  70% {
+    transform: translate(-100px, -100px);
   }
   100% {
-    transform: translateX(100%);
-    opacity: 1;
+    transform: translate(0, 0);
   }
 }
-.text-slide-right {
-  animation: slide-right 10s linear infinite;
+
+.animate-sitios {
+  animation: sitios-animation 8s infinite;
 }
-.text-slide-left {
-  animation: slide-left 10s linear infinite;
+
+/* Aplicaciones*/
+@keyframes aplicaciones-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-100px, -100px);
+  }
+  70% {
+    transform: translate(100px, -100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
-.text-fade-in {
-  animation: fade-in 2s forwards;
+
+.animate-aplicaciones {
+  animation: aplicaciones-animation 8s infinite;
 }
-.final {
-  -webkit-text-stroke: 1px blue;
-} /* Nuevo CSS para fijar la sección */
-.dynamic-section {
-  position: relative;
+
+/* Último texto: de abajo hacia arriba, luego se queda estático */
+@keyframes ultimo-animation {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
-.dynamic-section.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-.programs-section {
-  position: relative;
-  z-index: 3;
+
+.animate-ultimo {
+  animation: ultimo-animation 5s forwards;
 }

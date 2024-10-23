@@ -34,12 +34,18 @@ module.exports = {
         fuxia: "#fe00ff",
       },
       textShadow: {
-        'fuxia': '5px 5px 10px #fe00ff',
+        'fuxia': '5px 5px 5px #fe00ff',
+        'blue': '5px 5px 5px #66aaf9',
+        'white': '2px 2px 2px #FFFFFF',
+
+        
       },
       fontFamily: {
         nunito: ["Nunito", "sans-serif"],
-        mate: ['Mate SC', 'serif'],
+        rowdies: ["Rowdies", "sans-serif"],
+        arima: ["Arima", "system-ui"],
       },
+      
       
     },
   },

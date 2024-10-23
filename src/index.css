@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Arima:wght@100..700&family=Dancing+Script:wght@400..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Rowdies:wght@300;400;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-/* @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,11 +13,20 @@
   font-family: "Nunito", sans-serif; /* Fuente base para todo */
 }
 
-h1, h2, h3, h4, h5, h6, span {
+h1, h3, h4, h5, h6, span {
   font-family: "Rowdies", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
+h2 {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+
 
 html.dark {
   background-color: #040815;
@@ -35,46 +45,3 @@ html.dark {
   border-radius: 8px;
   background-color: #114389;
 }
-
-
-/*ANIMACIÓN DE LOS TEXTOS DEL COMPONENTE HACEMOS*/
-
-@keyframes tracking-in-expand-fwd-top {
-  0% {
-    letter-spacing: -0.5em;
-    transform: translateZ(-700px) translateY(-500px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes text-focus-in {
-  0% {
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    filter: blur(0);
-    opacity: 1;
-  }
-}
-
-.tracking-in-expand-fwd-top {
-  animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
-.text-focus-in {
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-
-
-
-
-

@@ -45,3 +45,35 @@ html.dark {
   border-radius: 8px;
   background-color: #114389;
 }
+
+
+/*ANIMACIONES DEL COMPONENTE CONTENT DE HERO*/
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.neon-effect {
+  position: relative;
+  border: 1px solid;
+  border-color: rgba(0, 183, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 183, 255, 0.9),
+              0 0 10px rgba(0, 183, 255, 0.7),
+              0 0 10px rgba(0, 183, 255, 0.5),
+              0 0 10px rgba(0, 183, 255, 0.3);
+  animation: neonPulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  from {
+    box-shadow: 0 0 15px rgba(0, 183, 255, 0.9),
+                0 0 10px rgba(0, 183, 255, 0.7),
+                0 0 10px rgba(0, 183, 255, 0.5),
+                0 0 10px rgba(0, 183, 255, 0.3);
+  }
+  to {
+    box-shadow: 0 0 15px rgba(0, 183, 255, 0.6),
+                0 0 10px rgba(0, 183, 255, 0.4),
+                0 0 10px rgba(0, 183, 255, 0.2),
+                0 0 10px rgba(0, 183, 255, 0.1);
+  }
+}

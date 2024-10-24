@@ -6,7 +6,7 @@ const Header = () => {
   const menuItems = ["Inicio", "Qué hacemos", "Productos", "Características"];
 
   return (
-    <Navbar className="fixed w-full top-5 z-20 bg-transparent rounded-t-lg">
+    <Navbar className="fixed w-full top-5 ml-44 z-20 bg-transparent rounded-t-lg">
       <NavbarContent>
         <NavbarMenuToggle 
           aria-label={isMenuOpen ? "Close menu" : "Open menu"} 
@@ -14,7 +14,7 @@ const Header = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         />
       </NavbarContent>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-6" justify="center">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index}>
             <Link className="text-zinc-50" href="#">{item}</Link>

@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import svg1 from "../../assets/videos/svg.webm";
 import "./Benefit.css";
 
@@ -64,3 +64,4 @@ const Benefit = () => {
 };
 
 export default Benefit;
+ */

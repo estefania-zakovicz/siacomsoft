@@ -1,33 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import Header from "./Components/Header/Header";
 import Hero_animation from "./Components/Hero/Hero_animation";
-import DynamicSection from "./Components/Make/DynamicSection";
-import Benefit from "./Components/Benefits/Benefit";
-
+import Content from "./Components/Hero/Content";
 
 const App = () => {
-  const [isSticky, setIsSticky] = useState(false);
+  const [showContent, setShowContent] = useState(false); // Controlar cuándo mostrar el contenido
 
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    setIsSticky(offset > window.innerHeight);
+  // Esta función se llamará al finalizar la animación de Hero_animation
+  const handleAnimationEnd = () => {
+    setShowContent(true); // Mostrar Content cuando Hero_animation termina
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <div className="">
-      <Hero_animation />
-      <div className={`dynamic-section ${isSticky ? "sticky top-0" : ""}`}>
-        <DynamicSection />
-      </div>
-      <div className="benefit-section">
-       
-        <Benefit />
+    <div className="relative h-screen w-full overflow-hidden">
+      <Header />
+      <div className="relative h-full w-full">
+        <Hero_animation onAnimationEnd={handleAnimationEnd} />
+        {showContent && (
+          <div className="absolute inset-0 z-30">
+            <Content />
+          </div>
+        )} {/* Mostrar Content superpuesto cuando showContent sea true */}
       </div>
     </div>
   );

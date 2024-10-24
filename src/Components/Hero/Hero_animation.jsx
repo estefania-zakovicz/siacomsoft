@@ -41,35 +41,35 @@ const Hero_animation = ({ onAnimationEnd }) => {
             <motion.img
               src={icono_fondo_oscuro}
               alt="Icono fondo oscuro"
-              initial={{ x: "0vw" }}
-              animate={{ x: 100 }}
+              initial={{ x: "0vw", scale: 1.5 }} // Escala inicial más grande
+              animate={{ x: 150, scale: 0.4 }} // Escala final más pequeña
               transition={{ type: "spring", stiffness: 20, damping: 30 }}
-              className="w-20 h-20"
+              className="w-40 "
             />
             <div className="flex flex-col items-center">
               <motion.img
                 src={siacom_blanco}
                 alt="Siacom blanco"
-                initial={{ x: "100vw" }}
-                animate={{ x: 0, scale: [1, 0.5] }}
+                initial={{ x: "100vw", scale: 1.5 }} // Escala inicial más grande
+                animate={{ x: 0, scale: 0.5 }} // Escala final
                 transition={{
                   type: "spring",
                   stiffness: 10,
                   damping: 10,
-                  delay: 0.2,
+                  delay: 0.4,
                 }}
                 className="w-30 h-24"
               />
               <motion.img
                 src={descriptor_blanco}
                 alt="Desarrollo de Software"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: -22, scale: [1, 0.5] }}
+                initial={{ opacity: 0, y: 50, scale: 1.5 }} // Escala inicial más grande
+                animate={{ x: 20, opacity: 1, y: -22, scale: 0.4 }} // Escala final
                 transition={{
                   type: "spring",
-                  stiffness: 20,
-                  damping: 20,
-                  delay: 0.4,
+                  stiffness: 30,
+                  damping: 30,
+                  delay: 1.5,
                 }}
                 className="w-auto h-8"
               />

@@ -4,6 +4,8 @@ import Hero_animation from "./Components/Hero/Hero_animation";
 import Content from "./Components/Hero/Content";
 import Make from "./Components/Make/Make";
 import Benefit from "./Components/Benefits/Benefit";
+import Footer from "./Components/Footer/Footer";
+
 
 const App = () => {
   const [showContent, setShowContent] = useState(false);
@@ -24,6 +26,9 @@ const App = () => {
       </div>
       <div className="h-screen w-full">
         <Benefit/>
+      </div>
+      <div className="h-screen w-full">
+        <Footer/>
       </div>
     </div>
   );

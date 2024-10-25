@@ -1,49 +1,39 @@
-import React from 'react';
+import React from "react";
 import banner from "../../assets/photos/fondoLuna.png";
 
 const Benefit = () => {
   return (
     <div
-      className="relative flex items-center justify-center min-h-screen w-full bg-cover bg-center"
+      className="relative flex items-center justify-center h-screen w-full bg-cover overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent), url(${banner})`
+        backgroundImage: `url(${banner})`, // Fondo de imagen
       }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full px-4">
+      {/* Grid principal con espacio entre cuadros */}
+      <div className="grid grid-cols-4 gap-5 w-full px-28 mt-96 relative">
         {/* Cuadro 1 */}
-        <div className="bg-white/15 border-2 border-[#ffffff10] backdrop-blur-md rounded-xl h-[250px] flex items-center justify-center">
-          <h3>Organización</h3>
-        </div>
-        
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-[400px] h-[300px] -translate-y-8"></div>
+
         {/* Cuadro 2 */}
-        <div className="bg-white/15 border-2 border-[#ffffff10] backdrop-blur-md rounded-xl h-[240px] flex items-center justify-center">
-          <h3>Seguridad</h3>
-        </div>
-        
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[300px] translate-x-28 -translate-y-4 "></div>
+
         {/* Cuadro 3 */}
-        <div className="bg-white/15 border-2 border-[#ffffff10] backdrop-blur-md rounded-xl h-[350px] flex items-center justify-center">
-          <h3 className="uppercase">Garantía</h3>
-        </div>
-        
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px] translate-x-11 "></div>
+
         {/* Cuadro 4 */}
-        <div className="bg-white/15 border-2 border-[#ffffff10] backdrop-blur-md rounded-xl h-[200px] flex items-center justify-center">
-          <h3>Control</h3>
-        </div>
-        
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[300px] translate-x-16 -translate-y-4 -rotate-6"></div>
+
         {/* Cuadro 5 */}
-        <div className="bg-white/15 border-2 border-[#ffffff10] backdrop-blur-md rounded-xl h-[300px] flex items-center justify-center">
-          <h3>Rapidez</h3>
-        </div>
-        
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-[350px] h-[250px] -translate-x-16 -translate-y-8 col-span-2 rotate-6"></div>
+
         {/* Cuadro 6 */}
-        <div className="bg-white/15 border-2 border-[#ffffff10] backdrop-blur-md rounded-xl h-[200px] flex items-center justify-center">
-          <h3>Licencia</h3>
-        </div>
-        
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[320px] row-span-2 translate-x-16 -translate-y-24"></div>
+
         {/* Cuadro 7 */}
-        <div className="bg-white/15 border-2 border-[#ffffff10] backdrop-blur-md rounded-xl h-[300px] flex items-center justify-center">
-          <h3>Mejora Contable</h3>
-        </div>
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-[400px] h-[250px] -translate-x-[680px] -translate-y-6"></div>
+
+        {/* Cuadro 8 */}
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg h-[250px] -translate-y-72 translate-x-[1020px] "></div>
       </div>
     </div>
   );

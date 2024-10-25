@@ -5,20 +5,25 @@ import siacom_blanco from "../../assets/photos/siacom_blanco.png";
 import descriptor_blanco from "../../assets/photos/descriptor_blanco.png";
 import fondo from "../../assets/photos/fondo.jpg";
 
+
 const Hero_animation = ({ onShowContent }) => {
   useEffect(() => {
-    // Simulamos el tiempo necesario para la animación
     const timer = setTimeout(onShowContent, 2000); // Ajusta el tiempo según la duración de la animación
     return () => clearTimeout(timer); // Limpieza del temporizador
   }, [onShowContent]);
 
   return (
     <div className="relative h-screen w-full">
-      <img
-        className="absolute left-0 w-full h-full object-cover"
-        src={fondo}
-        alt="Fondo"
+      {/* Contenedor para aplicar la imagen de fondo y el degradado */}
+      <div
+        className="absolute left-0 w-full h-full"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(${fondo})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       />
+
       <div className="relative z-20 flex items-center justify-center h-full">
         <motion.div
           className="flex items-center h-full"

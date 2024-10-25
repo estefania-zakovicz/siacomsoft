@@ -11,7 +11,7 @@ const Make = () => {
         autoPlay
         loop
         muted
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover bg-gradient-to-r from-indigo-500"
         src={video}
       />
       <div className="w-1/2  h-full flex items-center justify-center">

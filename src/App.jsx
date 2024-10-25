@@ -3,6 +3,7 @@ import Header from "./Components/Header/Header";
 import Hero_animation from "./Components/Hero/Hero_animation";
 import Content from "./Components/Hero/Content";
 import Make from "./Components/Make/Make";
+import Benefit from "./Components/Benefits/Benefit";
 
 const App = () => {
   const [showContent, setShowContent] = useState(false);
@@ -20,6 +21,9 @@ const App = () => {
       </div>
       <div className="h-screen w-full">
         <Make />
+      </div>
+      <div className="h-screen w-full">
+        <Benefit/>
       </div>
     </div>
   );

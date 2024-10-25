@@ -5,7 +5,6 @@ import siacom_blanco from "../../assets/photos/siacom_blanco.png";
 import descriptor_blanco from "../../assets/photos/descriptor_blanco.png";
 import fondo from "../../assets/photos/fondo.jpg";
 
-
 const Hero_animation = ({ onShowContent }) => {
   useEffect(() => {
     const timer = setTimeout(onShowContent, 2000); // Ajusta el tiempo según la duración de la animación

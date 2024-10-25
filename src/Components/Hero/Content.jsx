@@ -19,7 +19,7 @@ const FlipCard = ({ word, videoSrc, className }) => {
       className={`absolute w-20 h-20 bg-white bg-opacity-10 backdrop-blur-md flex items-center justify-center neon-effect ${isFlipped ? 'hidden' : ''}`}
       style={{ backfaceVisibility: 'hidden' }}
       animate={{ rotateY: isFlipped ? 180 : 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.5 }}
     >
         {!isFlipped && <span className="text-xl text-white">{word}</span>}
       </motion.div>
@@ -27,7 +27,7 @@ const FlipCard = ({ word, videoSrc, className }) => {
         <motion.div
           className="absolute w-full h-full"
           animate={{ rotateY: isFlipped ? 0 : 180 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
           <video autoPlay loop muted className="w-full h-full object-cover">
             <source src={videoSrc} type="video/mp4" />
@@ -54,8 +54,8 @@ const Content = () => {
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 1 }}
-            className="text-white text-xl font-light uppercase"
+            transition={{ delay: 0.5, duration: 3 }}
+            className="text-xl font-bold text-fuxia text-shadow-blue uppercase"
           >
             con soluciones digitales eficientes.
           </motion.p>

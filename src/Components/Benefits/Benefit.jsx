@@ -12,11 +12,13 @@ const Benefit = () => {
     <div
       className="relative flex items-center justify-center min-h-screen w-full bg-cover bg-center overflow-hidden"
       style={{
-        backgroundImage: `url(${banner})`, // Fondo de imagen
+        backgroundImage: `url(${banner})`,
       }}
     >
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/90"></div>
+
       {/* Grid principal con espacio entre cuadros */}
-      <div className="grid grid-cols-4 gap-5 w-full px-10 mt-32 relative">
+      <div className="grid grid-cols-4 gap-5 w-full px-10 mt-64 relative z-10">
 
         <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[300px] col-span-2 flex items-center p-4">
           {/* Columna izquierda */}
@@ -28,7 +30,7 @@ const Benefit = () => {
               sequi, adipisci sapiente natus eveniet voluptate vel voluptates
               temporibus omnis explicabo.
             </p>
-            <h3 className="text-2xl ml-4 ">Control</h3>
+            <h3 className="text-2xl ml-4 pt-4">Control</h3>
             <p className="ml-4 mt-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.           
             </p>
@@ -130,6 +132,7 @@ const Benefit = () => {
             <p className="mt-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque.
             </p>
+            
           </div>
          
         </div>
@@ -145,6 +148,10 @@ const Benefit = () => {
               esse et accusantium libero? Vitae delectus, atque est non quaerat,
               sequi, adipisci sapiente natus eveniet voluptate vel voluptates
               temporibus omnis explicabo.
+            </p>
+            <h3 className="text-2xl ml-4 pt-4">Control</h3>
+            <p className="ml-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.           
             </p>
           </div>
 

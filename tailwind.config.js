@@ -36,7 +36,7 @@ module.exports = {
       textShadow: {
         'fuxia': '5px 5px 5px #fe00ff',
         'blue': '2px 2px 3px #66aaf9',
-        'white': '2px 2px 2px #FFFFFF',
+        'white': '2px 1px 1px #FFFFFF',
 
         
       },

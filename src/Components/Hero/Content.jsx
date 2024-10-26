@@ -55,7 +55,7 @@ const Content = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 3 }}
-            className="text-xl font-bold text-fuxia text-shadow-blue uppercase"
+            className="text-xl font-bold text-fuxia text-shadow-white uppercase"
           >
             con soluciones digitales eficientes.
           </motion.p>

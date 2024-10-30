@@ -17,7 +17,7 @@ const Hero_animation = ({ onShowContent }) => {
       <div
         className="absolute left-0 w-full h-full"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(${fondo})`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(${fondo})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -33,7 +33,7 @@ const Hero_animation = ({ onShowContent }) => {
           <motion.div
             className="flex items-center"
             initial={{ x: "0", y: "0" }}
-            animate={{ x: "-80vh", y: "-42vh", scale: 0.5 }}
+            animate={{ x: "-62vh", y: "-45vh", scale: 0.5 }}
             transition={{
               delay: 2,
               duration: 3,

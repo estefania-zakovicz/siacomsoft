@@ -14,25 +14,23 @@ const Benefit = () => {
       style={{
         backgroundImage: `url(${banner})`,
       }}
+    
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
 
       {/* Grid principal con espacio entre cuadros */}
-      <div className="grid grid-cols-4 gap-5 w-full px-10 mt-64 relative z-10">
+      <div className="grid grid-cols-4 gap-5 w-full px-10 mt-20 relative z-10">
 
         <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[300px] col-span-2 flex items-center p-4">
           {/* Columna izquierda */}
           <div className="w-3/4">
             <h3 className="text-2xl ml-4 ">Organización</h3>
             <p className="ml-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-              esse et accusantium libero? Vitae delectus, atque est non quaerat,
-              sequi, adipisci sapiente natus eveniet voluptate vel voluptates
-              temporibus omnis explicabo.
+            Centraliza la información y optimiza la gestión de tareas, facilitando el orden y seguimiento en cada proceso de tu negocio.
             </p>
             <h3 className="text-2xl ml-4 pt-4">Control</h3>
             <p className="ml-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.           
+            Te brinda un acceso completo a los datos y métricas de tu empresa, ayudándote a tomar decisiones informadas y en tiempo real.       
             </p>
           </div>
 
@@ -53,7 +51,7 @@ const Benefit = () => {
         <div className="w-3/4">
             <h3 className="text-2xl ml-4 ">Seguridad</h3>
             <p className="ml-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque.
+            Protege tus datos y operaciones con sistemas de encriptación y acceso restringido.
             </p>
           </div>
 
@@ -69,7 +67,7 @@ const Benefit = () => {
           </div>
         </div>
 
-        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px]">
+      
         <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px] flex items-center p-4">
           {/* Columna derecha (Video) */}
           <div className="w-2/4 flex justify-center">
@@ -85,15 +83,12 @@ const Benefit = () => {
         <div className="w-3/4">
             <h3 className="text-2xl ">Rapidez</h3>
             <p className="mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque.
+            Automatiza operaciones que normalmente llevarían tiempo, permitiendo un servicio más ágil y eficiente.
             </p>
           </div>
-
-        
-        </div>
         </div>
         
-        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px]">
+   
         <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px] flex items-center p-4">
           {/* Columna derecha (Video) */}
           <div className="w-2/4 flex justify-center">
@@ -107,14 +102,13 @@ const Benefit = () => {
           </div>
           {/* Columna izquierda */}
         <div className="w-3/4">
-            <h3 className="text-2xl ml-4 ">Garantía</h3>
+            <h3 className="text-2xl">Garantía</h3>
             <p className="mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque.
+            La implementación profesional de un sistema asegura estabilidad y soporte técnico confiable para tu negocio.
             </p>
           </div>
         </div>
-        </div>
-        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px]">
+
         <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px] flex items-center p-4">
          {/* Columna derecha (Video) */}
          <div className="w-2/4 flex justify-center">
@@ -130,11 +124,8 @@ const Benefit = () => {
         <div className="w-3/4">
             <h3 className="text-2xl ">Licencia</h3>
             <p className="mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque.
+            Ofrece seguridad y respaldo legal, permitiéndote usar el software con derechos de uso y protección.
             </p>
-            
-          </div>
-         
         </div>
         </div>
 
@@ -144,15 +135,12 @@ const Benefit = () => {
           <div className="w-3/4">
             <h3 className="text-2xl ml-4 ">Mejora Contable</h3>
             <p className="ml-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-              esse et accusantium libero? Vitae delectus, atque est non quaerat,
-              sequi, adipisci sapiente natus eveniet voluptate vel voluptates
-              temporibus omnis explicabo.
+            Facilita el registro, análisis y control de las finanzas, contribuyendo a una contabilidad precisa y actualizada para un manejo financiero sólido.
             </p>
-            <h3 className="text-2xl ml-4 pt-4">Control</h3>
+           {/*  <h3 className="text-2xl ml-4 pt-4">Control</h3>
             <p className="ml-4 mt-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.           
-            </p>
+            </p> */}
           </div>
 
           {/* Columna derecha (Video) */}

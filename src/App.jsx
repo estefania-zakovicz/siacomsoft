@@ -4,12 +4,10 @@ import Hero_animation from "./Components/Hero/Hero_animation";
 import Content from "./Components/Hero/Content";
 import Make from "./Components/Make/Make";
 import Benefit from "./Components/Benefits/Benefit";
-import Footer from "./Components/Footer/Footer";
-
+import Carousel from "./Components/Project/Carousel";
 
 const App = () => {
   const [showContent, setShowContent] = useState(false);
-
   const handleShowContent = () => {
     setShowContent(true);
   };
@@ -24,11 +22,11 @@ const App = () => {
       <div className="h-screen w-full">
         <Make />
       </div>
-      <div className="h-screen w-full">
-        <Benefit/>
+      <div className="relative w-full h-screen bg-black">
+        <Benefit />
       </div>
       <div className="h-screen w-full">
-        <Footer/>
+        <Carousel />
       </div>
     </div>
   );

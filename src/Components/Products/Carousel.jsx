@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import image1 from "../../assets/photos/negocio.jpg";
 import image2 from "../../assets/photos/pagoQr.jpg";
 import image3 from "../../assets/photos/tecnologias.jpg";
+import "./Carousel.css";
 
 const sliderItems = [
   { image: image1, name: "COMERCIOS", title: "" },
@@ -41,9 +42,11 @@ const Carousel = () => {
   return (
     <section
       ref={carouselRef}
-      className={`relative w-full h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-black carousel-slide-up ${isVisible ? "visible" : ""}`}
+      className={`relative pt-10 w-full h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-black carousel-slide-up ${isVisible ? "visible" : ""}`}
     >
-      <div className="absolute mx-20 my-10 inset-0 bg-gradient-to-r from-blue-400 via-blue-600 to-pink-400 rounded-3xl z-0"></div>
+      <div className="absolute mx-20 my-10 inset-0 z-0"></div>
+      <div className="luz_1 "></div>
+      <div className="luz_2 "></div>
       <div className="flex items-center gap-5 z-10">
         {sliderItems.map((item, index) => (
           <div

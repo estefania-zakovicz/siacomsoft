@@ -6,6 +6,7 @@ import svg3 from "../../assets/svg/speed.webm";
 import svg4 from "../../assets/svg/warrantie.webm";
 import svg5 from "../../assets/svg/sistema.webm";
 import svg6 from "../../assets/svg/contability.webm";
+import "./Benefit.css";
 
 const Benefit = () => {
   return (
@@ -21,7 +22,7 @@ const Benefit = () => {
       {/* Grid principal con espacio entre cuadros */}
       <div className="grid grid-cols-4 gap-5 w-full px-10 mt-20 relative z-10">
 
-        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[300px] col-span-2 flex items-center p-4">
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[300px] col-span-2 flex items-center p-4 sombra_1">
           {/* Columna izquierda */}
           <div className="w-3/4">
             <h3 className="text-2xl ml-4 ">Organización</h3>
@@ -46,7 +47,7 @@ const Benefit = () => {
           </div>
         </div>
        
-        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px] flex items-center p-4">
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px] flex items-center p-4 sombra_5">
         {/* Columna izquierda */}
         <div className="w-3/4">
             <h3 className="text-2xl ml-4 ">Seguridad</h3>
@@ -89,7 +90,7 @@ const Benefit = () => {
         </div>
         
    
-        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px] flex items-center p-4">
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px] flex items-center p-4 sombra_3">
           {/* Columna derecha (Video) */}
           <div className="w-2/4 flex justify-center">
             <video
@@ -109,7 +110,7 @@ const Benefit = () => {
           </div>
         </div>
 
-        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px] flex items-center p-4">
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px] flex items-center p-4 sombra_4">
          {/* Columna derecha (Video) */}
          <div className="w-2/4 flex justify-center">
             <video
@@ -130,7 +131,7 @@ const Benefit = () => {
         </div>
 
 
-        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[300px] col-span-2 flex items-center p-4 -translate-y-24">
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[300px] col-span-2 flex items-center p-4 -translate-y-24 sombra_2">
           {/* Columna izquierda */}
           <div className="w-3/4">
             <h3 className="text-2xl ml-4 ">Mejora Contable</h3>

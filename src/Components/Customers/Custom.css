@@ -1,7 +1,7 @@
 .slider {
     width: 75vw;
     padding-top: 100px;
-    height: auto;
+    height: 60vh;
     margin: auto;
     overflow: hidden;
 }
@@ -32,3 +32,24 @@
         transform: translateX(calc(-200px * 7));
     }
 }
+
+
+ /*Luces*/
+
+/*  .luz_3{
+    position: absolute;
+    box-shadow: 200px 100px 1000px 100px blue;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    translate: 1000px 0px;
+  }
+  
+  .luz_4{
+    position: absolute;
+    box-shadow: 20px 20px 200px 20px #fe00ff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    translate: 10px 25px;
+  } */

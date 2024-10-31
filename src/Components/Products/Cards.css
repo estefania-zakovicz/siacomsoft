@@ -12,8 +12,25 @@ video {
     position: relative;
   }
   
-  .-bottom-20 {
-    bottom: -5rem;
+  /* .bottom{
+    --move-hover:-4px;
+    --shadow: 0 2px 8px -1px rgba(39,94,254,.32);
+    --shadow-hover: 0 4px 20px -2px rgba(39,94,254,.5);
+    display: block;
+    background: #272727;
+    box-shadow: var(--shadow);
+    transform: translateY(var(--y)) translateZ(0);
+    transition: transform 0.44s ease, box-shadow 0.44s ease;
+  }
+
+.bottom:hover{
+  --y:var(--move-hover);
+  --shadow: var(--shadow-hover);
+} */
+
+  .-bottom-10 {
+    bottom: -2.5rem;
+
   }
   
   .my-2 {
@@ -175,8 +192,8 @@ video {
             backface-visibility: hidden;
   }
   
-  .group:hover .group-hover\:bottom-20 {
-    bottom: 5rem;
+  .group:hover .group-hover\:bottom-10 {
+    bottom: 2.5rem;
   }
   
   .group:hover .group-hover\:scale-125 {
@@ -186,5 +203,14 @@ video {
   }
   
   .group:hover .group-hover\:my-rotate-y-180 {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) scale(1.2);
   }
+
+  .backdrop-blur-md {
+    backdrop-filter: blur(10px);
+  }
+  
+  .bg-white {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  

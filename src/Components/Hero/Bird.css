@@ -1,0 +1,10 @@
+.bird-animation {
+    width: 137.25px; /* Ancho de cada frame del sprite (911px/4) */ height: 169px; /* Altura del sprite */
+    background-image: url('../../assets/photos/bird-vuelo.png');
+    background-repeat: no-repeat;
+    animation: fly 1s steps(4) infinite;
+  
+  }
+  
+  @keyframes fly { 0% { background-position: 0 0; } 100% { background-position: -549px 0; } /* Ancho total del sprite */ }
+  

@@ -25,11 +25,11 @@ const Benefit = () => {
         <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[300px] col-span-2 flex items-center p-4 sombra_1">
           {/* Columna izquierda */}
           <div className="w-3/4">
-            <h3 className="text-2xl ml-4 ">Organización</h3>
+          <h2 className="text-2xl ml-4 font-bold">Organización</h2>
             <p className="ml-4 mt-2">
             Centraliza la información y optimiza la gestión de tareas, facilitando el orden y seguimiento en cada proceso de tu negocio.
             </p>
-            <h3 className="text-2xl ml-4 pt-4">Control</h3>
+            <h2 className="text-2xl ml-4 font-bold">Control</h2>
             <p className="ml-4 mt-2">
             Te brinda un acceso completo a los datos y métricas de tu empresa, ayudándote a tomar decisiones informadas y en tiempo real.       
             </p>
@@ -50,7 +50,7 @@ const Benefit = () => {
         <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[200px] flex items-center p-4 sombra_5">
         {/* Columna izquierda */}
         <div className="w-3/4">
-            <h3 className="text-2xl ml-4 ">Seguridad</h3>
+        <h2 className="text-2xl ml-4 font-bold">Seguridad</h2>
             <p className="ml-4 mt-2">
             Protege tus datos y operaciones con sistemas de encriptación y acceso restringido.
             </p>
@@ -82,7 +82,7 @@ const Benefit = () => {
           </div>
         {/* Columna izquierda */}
         <div className="w-3/4">
-            <h3 className="text-2xl ">Rapidez</h3>
+        <h2 className="text-2xl ml-4 font-bold">Rapidez</h2>
             <p className="mt-2">
             Automatiza operaciones que normalmente llevarían tiempo, permitiendo un servicio más ágil y eficiente.
             </p>
@@ -103,7 +103,7 @@ const Benefit = () => {
           </div>
           {/* Columna izquierda */}
         <div className="w-3/4">
-            <h3 className="text-2xl">Garantía</h3>
+        <h2 className="text-2xl ml-4 font-bold">Garantía</h2>
             <p className="mt-2">
             La implementación profesional de un sistema asegura estabilidad y soporte técnico confiable para tu negocio.
             </p>
@@ -123,7 +123,7 @@ const Benefit = () => {
           </div>
         {/* Columna izquierda */}
         <div className="w-3/4">
-            <h3 className="text-2xl ">Licencia</h3>
+        <h2 className="text-2xl ml-4 font-bold">Licencia</h2>
             <p className="mt-2">
             Ofrece seguridad y respaldo legal, permitiéndote usar el software con derechos de uso y protección.
             </p>
@@ -134,7 +134,7 @@ const Benefit = () => {
         <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[300px] col-span-2 flex items-center p-4 -translate-y-24 sombra_2">
           {/* Columna izquierda */}
           <div className="w-3/4">
-            <h3 className="text-2xl ml-4 ">Mejora Contable</h3>
+            <h2 className="text-2xl ml-4 font-bold">Mejora Contable</h2>
             <p className="ml-4 mt-2">
             Facilita el registro, análisis y control de las finanzas, contribuyendo a una contabilidad precisa y actualizada para un manejo financiero sólido.
             </p>

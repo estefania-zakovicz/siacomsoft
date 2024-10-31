@@ -22,7 +22,6 @@ const Hero_animation = ({ onShowContent }) => {
           backgroundPosition: "center",
         }}
       />
-
       <div className="relative z-20 flex items-center justify-center h-full">
         <motion.div
           className="flex items-center h-full"

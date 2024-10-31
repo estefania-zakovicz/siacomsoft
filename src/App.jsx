@@ -7,6 +7,7 @@ import Benefit from "./Components/Benefits/Benefit";
 import Carousel from "./Components/Products/Carousel";
 import Custom from "./Components/Customers/Custom";
 import Cards from "./Components/Products/Cards";
+import Bird from "./Components/Hero/Bird";
 
 const App = () => {
   const [showContent, setShowContent] = useState(false);

@@ -37,15 +37,25 @@ module.exports = {
         'fuxia': '5px 5px 5px #fe00ff',
         'blue': '2px 2px 3px #66aaf9',
         'white': '2px 1px 1px #FFFFFF',
-
-        
       },
       fontFamily: {
         nunito: ["Nunito", "sans-serif"],
         rowdies: ["Rowdies", "sans-serif"],
         arima: ["Arima", "system-ui"],
       },
-      
+      fontWeight: {
+        thin: '100',
+        hairline: '100',
+        extralight: '200',
+        light: '300',
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        extrabold: '800',
+        'extra-bold': '800',
+        black: '900',
+      }
       
     },
   },

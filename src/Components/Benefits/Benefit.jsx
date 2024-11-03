@@ -8,6 +8,7 @@ import svg5 from "../../assets/svg/sistema.webm";
 import svg6 from "../../assets/svg/contability.webm";
 import "./Benefit.css";
 
+
 const Benefit = () => {
   return (
     <div
@@ -29,7 +30,7 @@ const Benefit = () => {
             <p className="ml-4 mt-2">
             Centraliza la información y optimiza la gestión de tareas, facilitando el orden y seguimiento en cada proceso de tu negocio.
             </p>
-            <h2 className="text-2xl ml-4 font-bold">Control</h2>
+            <h2 className="text-2xl ml-4 mt-10 font-bold">Control</h2>
             <p className="ml-4 mt-2">
             Te brinda un acceso completo a los datos y métricas de tu empresa, ayudándote a tomar decisiones informadas y en tiempo real.       
             </p>
@@ -150,7 +151,7 @@ const Benefit = () => {
               autoPlay
               loop
               muted
-              className="rounded-md w-[60%] mt-40 ml-20" // Ajusta el tamaño del video como desees
+              className="rounded-md w-[60%] mt-40 ml-20" // Ajusta el tamaño del video
               src={svg6}
             />
           </div>

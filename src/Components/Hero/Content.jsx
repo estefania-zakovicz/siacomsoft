@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import BirdAnimation from "./Bird";
+/* import BirdAnimation from "./Bird"; */
 
 
 const Content = () => {
@@ -33,7 +33,7 @@ const Content = () => {
             className="flex justify-center items-center"
           >
             
-            <BirdAnimation className="mb-32 mr-28 w-40 h-40" />
+            {/* <BirdAnimation className="mb-32 mr-28 w-40 h-40" /> */}
           </motion.div>
         </div>
       </div>

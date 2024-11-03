@@ -10,7 +10,7 @@
 
 
 /*ANIMACIÓN DEL TEXTO DE LA COLUMNA DERECHA*/
-
+/* 
 .tracking-in-expand-fwd-bottom {
 	-webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	        animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -48,6 +48,38 @@
             transform: translateZ(0) translateY(0);
     opacity: 1;
   }
+} */
+
+
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.h2 {
+  
+  font-family: "Arima", sans-serif;
+  font-weight: 100;
+  font-optical-sizing: auto;
+  font-size: 10vw;
+  line-height: 10vw;
+  font-variation-settings: 'wght' 100, 'wdth' 85;
+}
+
+
+.h2 .char {
+  display: inline-block;
+  animation: breathe 4000ms infinite both;
+  animation-delay: calc(var(--char-index) * 400ms);
+}
+
+.h2:hover .char {
+  animation-play-state: paused;
 }
 
   

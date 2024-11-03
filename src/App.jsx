@@ -7,7 +7,7 @@ import Benefit from "./Components/Benefits/Benefit";
 import Carousel from "./Components/Products/Carousel";
 import Custom from "./Components/Customers/Custom";
 import Cards from "./Components/Products/Cards";
-import Bird from "./Components/Hero/Bird";
+/* import Bird from "./Components/Hero/Bird"; */
 
 const App = () => {
   const [showContent, setShowContent] = useState(false);
@@ -31,7 +31,7 @@ const App = () => {
       <div className="h-auto w-full bg-black">
         <Custom />
       </div>
-      <div className="h-screen w-full bg-black">
+      <div className="h-screen w-full">
         <Cards />
       </div>
       <div className="h-screen w-full">

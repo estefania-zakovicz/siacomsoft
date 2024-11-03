@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import icono_fondo_oscuro from "../../assets/photos/icono_fondo_oscuro.png";
 import siacom_blanco from "../../assets/photos/siacom_blanco.png";
 import descriptor_blanco from "../../assets/photos/descriptor_blanco.png";
-import fondo from "../../assets/photos/fondo.jpg";
+import videoFondo from "../../assets/videos/fondo-banner.mp4";
+
 
 const Hero_animation = ({ onShowContent }) => {
   useEffect(() => {
@@ -13,15 +14,24 @@ const Hero_animation = ({ onShowContent }) => {
 
   return (
     <div className="relative h-screen w-full">
-      {/* Contenedor para aplicar la imagen de fondo y el degradado */}
+      {/* Video de fondo con repetición indefinida */}
+      <video
+        src={videoFondo}
+        autoPlay
+        loop
+        muted
+        className="absolute left-0 top-0 w-full h-full object-cover"
+      />
+      
+      {/* Contenedor para el degradado superpuesto al video */}
       <div
         className="absolute left-0 w-full h-full"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(${fondo})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9))",
         }}
       />
+
+      {/* Contenido animado */}
       <div className="relative z-20 flex items-center justify-center h-full">
         <motion.div
           className="flex items-center h-full"

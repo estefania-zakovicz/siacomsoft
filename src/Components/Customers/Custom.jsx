@@ -13,7 +13,7 @@ const Custom = () => {
       <div className="slider">
         <div className="luz_3 "></div>
         <div className="luz_4 "></div>
-        <div className="mb-20 mt-10 text-2xl text-center"><h2>Empresas que confiaron en nosotros</h2></div>
+        <div className="mb-20 mt-10 text-2xl text-center"><h2>Nuestras Aplicaciones</h2></div>
         <div className="slide-track justify-center items-center h-12 grayscale">
             <div className="slide ">
             <img src={blessing} alt="Logo" className="" />

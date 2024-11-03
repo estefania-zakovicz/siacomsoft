@@ -28,6 +28,19 @@ const Make = () => {
     };
   }, []);
 
+  // Función para dividir el texto en caracteres envueltos en un span
+  const renderAnimatedText = (text) => {
+    return text.split("").map((char, index) => (
+      <span
+        key={index}
+        className="char"
+        style={{ "--char-index": index }}
+      >
+        {char}
+      </span>
+    ));
+  };
+
   return (
     <div id="second-section" className="relative w-full h-screen flex items-center justify-center">
       <video
@@ -48,38 +61,34 @@ const Make = () => {
       </div>
       <div className="w-1/2 h-full flex flex-col justify-center text-left z-10">
         <motion.h2
-          className="tracking-in-expand-fwd-bottom text-white text-7xl font-semibold mb-2 ml-20"
+          className="h2 text-white text-7xl mb-2 ml-20"
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          style={{ opacity: 0 }}
         >
-          PROGRAMAS
+          {renderAnimatedText("Programas")}
         </motion.h2>
         <motion.h2
-          className="tracking-in-expand-fwd-bottom text-white text-7xl font-semibold mb-2 ml-20"
+          className="h2 text-white text-7xl mb-2 ml-20"
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ delay: 1, duration: 1 }}
-          style={{ opacity: 0 }}
         >
-          SITIOS WEBS
+          {renderAnimatedText("Sitios Webs")}
         </motion.h2>
         <motion.h2
-          className="tracking-in-expand-fwd-bottom text-white text-7xl font-semibold mb-2 ml-20"
+          className="h2 text-white text-7xl mb-2 ml-20"
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ delay: 1.5, duration: 1 }}
-          style={{ opacity: 0 }}
         >
-          APLICACIONES
+          {renderAnimatedText("Aplicaciones")}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ delay: 2, duration: 1 }}
-          className="tracking-in-expand-fwd-bottom text-fuxia text-xl font-bold uppercase text-left ml-20"
-          style={{ opacity: 0 }}
+          className="text-fuxia text-xl font-bold uppercase text-left ml-20"
         >
           para que puedas concentrarte<br /> en crecer.
         </motion.p>

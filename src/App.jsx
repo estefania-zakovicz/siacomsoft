@@ -4,10 +4,10 @@ import Hero_animation from "./Components/Hero/Hero_animation";
 import Content from "./Components/Hero/Content";
 import Make from "./Components/Make/Make";
 import Benefit from "./Components/Benefits/Benefit";
-import Carousel from "./Components/Products/Carousel";
 import Custom from "./Components/Customers/Custom";
 import Cards from "./Components/Products/Cards";
-/* import Bird from "./Components/Hero/Bird"; */
+import Contact from "./Components/Contact/Contact";
+
 
 const App = () => {
   const [showContent, setShowContent] = useState(false);
@@ -34,8 +34,8 @@ const App = () => {
       <div className="h-screen w-full">
         <Cards />
       </div>
-      <div className="h-screen w-full">
-        <Carousel />
+      <div className="h-screen w-full bg-black">
+        <Contact />
       </div>
     </div>
   );

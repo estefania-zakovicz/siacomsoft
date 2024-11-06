@@ -114,14 +114,16 @@ const Cards = () => {
         muted
         className="absolute left-0 top-0 w-full h-full object-cover"
       />
-      {/* Gradiente superpuesto */}
-      <div
-        className="absolute left-0 w-full h-full"
-        style={{
-          backgroundImage:
-            "linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))",
-        }}
-      />
+  <div
+  className="absolute inset-0 w-full h-full pointer-events-none"
+  style={{
+    backgroundImage: `
+      linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9))
+    `,
+  }}
+/>
+
 
       <section className="h-screen flex justify-center items-center gap-8 text-white">
         {cardData.map((card, index) => (

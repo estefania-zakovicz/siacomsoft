@@ -1,62 +1,132 @@
-import React, { useState } from 'react';
-import image1 from '../../assets/photos/negocio.jpg';
-import image2 from '../../assets/photos/pagoQr.jpg';
-import image3 from '../../assets/photos/tecnologias.jpg';
+import React from 'react';
+import { useForm, Controller } from 'react-hook-form';
 
-const sliderItems = [
-  { image: image1, name: 'Mike', title: 'web3 Developer' },
-  { image: image2, name: 'Samite', title: 'Wordpress Developer' },
-  { image: image3, name: 'Hashi', title: 'Java Developer' },
-  { image: image1, name: 'Kaity', title: 'Web Developer' },
-  { image: image2, name: 'Lauren', title: 'PHP Developer' },
-  { image: image3, name: 'Ryan', title: 'SEO Developer' },
-  { image: image1, name: 'Dakes', title: 'SQL Developer' }
-];
+export default function FormComponent() {
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      phone: '',
+      email: '',
+      message: '',
+    },
+  });
 
-const Contact = () => {
-  const [activeIndex, setActiveIndex] = useState(3); // Empezamos con la 4ta imagen activa (índice 3)
-
-  const handleClick = (index) => {
-    setActiveIndex(index);
+  const onSubmit = (data) => {
+    console.log(data);
   };
 
   return (
-    <section className="relative w-full h-screen my-10 flex items-center justify-center overflow-hidden bg-cover bg-center">
-      {/* Fondo borroso con bordes redondeados */}
-      <div className="absolute mx-20 inset-0 bg-gradient-to-r from-blue-200 via-blue-400 to-pink-400 rounded-3xl z-0"></div>
+    <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-black">
+      <h2 className='text-3xl mb-10'>Contactate con nosotros</h2>
+      <div className="flex flex-col w-full max-w-4xl p-4 bg-black rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Columna Izquierda */}
+          <div>
+            <label className="text-white mb-2 block">Nombre</label>
+            <Controller
+              control={control}
+              name="firstName"
+              rules={{ required: 'Este campo es requerido.' }}
+              render={({ field }) => (
+                <input
+                  {...field}
+                  className="w-full mb-4 p-2 rounded text-black bg-white"
+                />
+              )}
+            />
+            {errors.firstName && <p className="text-fuxia">{errors.firstName.message}</p>}
 
-      <div className="flex items-center gap-5 z-10"> {/* z-10 para poner encima del blur */}
-        {sliderItems.map((item, index) => (
-          <div
-            key={index}
-            className={`relative cursor-pointer transition-all duration-700 ${index === activeIndex ? 'w-[500px] h-[550px]' : 'w-[100px]'} ${
-              index === 0 || index === sliderItems.length - 1 ? 'h-[550px]' : index === 1 || index === 5 ? 'h-[230px]' : 'h-[500px]'
-            }`}
-            onClick={() => handleClick(index)}
-          >
-            <img
-  src={item.image}
-  alt={item.name}
-  className={`w-full h-full object-cover rounded-lg transition-all duration-700 ${index === activeIndex ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
-/>
+            <label className="text-white mb-2 block">Apellido</label>
+            <Controller
+              control={control}
+              name="lastName"
+              rules={{ required: 'Este campo es requerido.' }}
+              render={({ field }) => (
+                <input
+                  {...field}
+                  className="w-full mb-4 p-2 rounded text-black bg-white"
+                />
+              )}
+            />
+            {errors.lastName && <p className="text-fuxia">{errors.lastName.message}</p>}
 
+            <label className="text-white mb-2 block">Celular</label>
+            <Controller
+              control={control}
+              name="phone"
+              rules={{
+                required: 'Este campo es requerido.',
+                pattern: {
+                  value: /^[0-9]+$/,
+                  message: 'Debe ser un número válido.',
+                },
+              }}
+              render={({ field }) => (
+                <input
+                  {...field}
+                  className="w-full mb-4 p-2 rounded text-black bg-white"
+                />
+              )}
+            />
+            {errors.phone && <p className="text-fuxia">{errors.phone.message}</p>}
 
-
-            <h1 className={`absolute top-1/2 left-[-10%] transform -rotate-90 text-2xl text-blue-400 font-bold uppercase transition-opacity duration-700 ${index === activeIndex ? 'opacity-0' : 'opacity-100'}`}>
-              {item.name}
-            </h1>
-            {index === activeIndex && (
-              <div className="absolute bottom-4 left-4 text-fuxia">
-                <h2 className="text-xl font-bold uppercase">{item.name}</h2>
-                <p className="text-lg font-bold uppercase">{item.title}</p>
-              </div>
-            )}
+            <label className="text-white mb-2 block">Email</label>
+            <Controller
+              control={control}
+              name="email"
+              rules={{
+                required: 'Este campo es requerido.',
+                pattern: {
+                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                  message: 'Debe ser un correo electrónico válido.',
+                },
+              }}
+              render={({ field }) => (
+                <input
+                  {...field}
+                  className="w-full mb-4 p-2 rounded text-black bg-white"
+                />
+              )}
+            />
+            {errors.email && <p className="text-fuxia">{errors.email.message}</p>}
           </div>
-        ))}
+
+          {/* Columna Derecha */}
+          <div>
+            <label className="text-white mb-2 block">Mensaje</label>
+            <Controller
+              control={control}
+              name="message"
+              rules={{ required: 'Este campo es requerido.' }}
+              render={({ field }) => (
+                <textarea
+                  {...field}
+                  className="w-full p-2 rounded text-black bg-white resize-none"
+                  rows="12"  // Ajusta la altura del campo de mensaje
+                />
+              )}
+            />
+            {errors.message && <p className="text-fuxia">{errors.message.message}</p>}
+          </div>
+        </div>
+
+        {/* Botón Enviar */}
+        <div className="mt-8">
+          <button
+            className="w-full py-2 bg-fuxia text-white rounded hover:bg-blue-700"
+            type="button"
+            onClick={handleSubmit(onSubmit)}
+          >
+            Enviar
+          </button>
+        </div>
       </div>
-
-    </section>
+    </div>
   );
-};
-
-export default Contact;
+}

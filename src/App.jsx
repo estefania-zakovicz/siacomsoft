@@ -7,6 +7,7 @@ import Benefit from "./Components/Benefits/Benefit";
 import Custom from "./Components/Customers/Custom";
 import Cards from "./Components/Products/Cards";
 import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
 
 
 const App = () => {
@@ -36,6 +37,9 @@ const App = () => {
       </div>
       <div className="h-screen w-full bg-black">
         <Contact />
+      </div>
+      <div className="w-full bg-black">
+        <Footer />
       </div>
     </div>
   );

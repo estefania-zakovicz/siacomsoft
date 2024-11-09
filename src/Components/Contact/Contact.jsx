@@ -22,9 +22,16 @@ export default function FormComponent() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-black">
-      <h2 className='text-3xl mb-10'>Contactate con nosotros</h2>
-      <div className="flex flex-col w-full max-w-4xl p-4 bg-black rounded-lg">
+    <div className="relative flex flex-col items-center justify-center min-h-screen pt-20 p-8 bg-black">
+      <h2 className="text-3xl mb-10 text-center">
+        Contactate con nosotros
+        <br />
+        Escribinos tu mensaje y nos contactaremos a la brevedad para responder tus dudas.
+      </h2>
+      
+      
+      
+      <div className="relative flex flex-col w-full max-w-4xl p-4 bg-black rounded-lg pt-18 z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Columna Izquierda */}
           <div>
@@ -36,7 +43,7 @@ export default function FormComponent() {
               render={({ field }) => (
                 <input
                   {...field}
-                  className="w-full mb-4 p-2 rounded text-black bg-white"
+                  className="w-full mb-4 p-2 rounded text-black bg-gray-300"
                 />
               )}
             />
@@ -50,7 +57,7 @@ export default function FormComponent() {
               render={({ field }) => (
                 <input
                   {...field}
-                  className="w-full mb-4 p-2 rounded text-black bg-white"
+                  className="w-full mb-4 p-2 rounded text-black bg-gray-300"
                 />
               )}
             />
@@ -70,7 +77,7 @@ export default function FormComponent() {
               render={({ field }) => (
                 <input
                   {...field}
-                  className="w-full mb-4 p-2 rounded text-black bg-white"
+                  className="w-full mb-4 p-2 rounded text-black bg-gray-300"
                 />
               )}
             />
@@ -90,7 +97,7 @@ export default function FormComponent() {
               render={({ field }) => (
                 <input
                   {...field}
-                  className="w-full mb-4 p-2 rounded text-black bg-white"
+                  className="w-full mb-4 p-2 rounded text-black bg-gray-300"
                 />
               )}
             />
@@ -107,8 +114,8 @@ export default function FormComponent() {
               render={({ field }) => (
                 <textarea
                   {...field}
-                  className="w-full p-2 rounded text-black bg-white resize-none"
-                  rows="12"  // Ajusta la altura del campo de mensaje
+                  className="w-full p-2 rounded text-black bg-gray-300 resize-none"
+                  rows="12" // Ajusta la altura del campo de mensaje
                 />
               )}
             />

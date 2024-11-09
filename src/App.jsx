@@ -41,6 +41,7 @@ const App = () => {
       <div className="w-full bg-black">
         <Footer />
       </div>
+      
     </div>
   );
 };

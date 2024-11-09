@@ -6,24 +6,28 @@ import svg3 from "../../assets/svg/speed.webm";
 import svg4 from "../../assets/svg/warrantie.webm";
 import svg5 from "../../assets/svg/sistema.webm";
 import svg6 from "../../assets/svg/contability.webm";
-import "./Benefit.css";
+
 
 
 const Benefit = () => {
   return (
     <div
       className="relative flex items-center justify-center min-h-screen w-full bg-cover bg-center overflow-hidden"
+      
       style={{
         backgroundImage: `url(${banner})`,
       }}
     
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
-
+     
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black">
+      <h2 className="pt-20 text-center text-4xl">Beneficios al utilizar nuestros servicios</h2>
+      </div>
+      
       {/* Grid principal con espacio entre cuadros */}
-      <div className="grid grid-cols-4 gap-5 w-full px-10 mt-20 relative z-10">
+      <div className="grid grid-cols-4 gap-5 w-full px-10 mt-40 relative z-10">
 
-        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[300px] col-span-2 flex items-center p-4 sombra_1">
+        <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full h-[300px] col-span-2 flex items-center p-4">
           {/* Columna izquierda */}
           <div className="w-3/4">
           <h2 className="text-2xl ml-4 font-bold">Organización</h2>

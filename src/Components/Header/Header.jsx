@@ -5,7 +5,7 @@ import logo from "../../assets/photos/siacomsoft.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showLogo, setShowLogo] = useState(false); // Estado para el logo
-  const menuItems = ["Inicio", "Qué hacemos", "Beneficios", "Productos", "Contacto"];
+  const menuItems = ["Inicio", "Qué hacemos", "Beneficios", "Servicios"];
 
   // Manejar el evento de scroll para mostrar el logo
   useEffect(() => {
@@ -35,22 +35,40 @@ const Header = () => {
       </NavbarContent>
       
       <NavbarContent className="hidden sm:flex gap-6" justify="center">
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={index}>
-            <Link className="text-zinc-50" href="#">{item}</Link>
-          </NavbarMenuItem>
-        ))}
+        {menuItems.map((item, index) => {
+          // Crear un href dinámico para que apunte a las secciones de la página
+          const sectionId = item.toLowerCase().replace(/\s+/g, '-'); // Convertir "Qué hacemos" en "qué-hacemos"
+          return (
+            <NavbarMenuItem key={index}>
+              <Link 
+                className="text-zinc-50 cursor-pointer" // Añadir cursor-pointer
+                href={`#${sectionId}`} // Enlace a la sección correspondiente
+              >
+                {item}
+              </Link>
+            </NavbarMenuItem>
+          );
+        })}
         <Button radius="full" className="bg-gradient-to-tr from-pink-500 to-blue-500 text-white shadow-lg">
           Contactarme
         </Button>
       </NavbarContent>
       
       <NavbarMenu isOpen={isMenuOpen}>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={index}>
-            <Link className="w-full text-zinc-50" href="#" size="lg">{item}</Link>
-          </NavbarMenuItem>
-        ))}
+        {menuItems.map((item, index) => {
+          const sectionId = item.toLowerCase().replace(/\s+/g, '-');
+          return (
+            <NavbarMenuItem key={index}>
+              <Link 
+                className="w-full text-zinc-50 cursor-pointer" // Añadir cursor-pointer
+                href={`#${sectionId}`} // Enlace a la sección correspondiente
+                size="lg"
+              >
+                {item}
+              </Link>
+            </NavbarMenuItem>
+          );
+        })}
       </NavbarMenu>
     </Navbar>
   );

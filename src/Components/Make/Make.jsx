@@ -31,6 +31,7 @@ const Make = () => {
   // Función para dividir el texto en caracteres envueltos en un span
   const renderAnimatedText = (text) => {
     return text.split("").map((char, index) => (
+      
       <span
         key={index}
         className="char"
@@ -42,7 +43,7 @@ const Make = () => {
   };
 
   return (
-    <div id="second-section" className="relative w-full h-screen flex items-center justify-center">
+    <div id="second-section make" className="relative w-full h-screen flex items-center justify-center">
       <video
         autoPlay
         loop

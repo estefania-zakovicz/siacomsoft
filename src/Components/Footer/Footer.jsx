@@ -14,7 +14,7 @@ export default function Footer() {
         className="absolute left-0 top-0 w-full object-cover"
       />
 
-      {/* Gradiente de fondo de transparente a negro (de abajo hacia arriba) */}
+      {/* Gradiente de fondo de transparente a negro de abajo hacia arriba */}
       <div
         className="absolute inset-0 w-full h-full z-10"
         style={{

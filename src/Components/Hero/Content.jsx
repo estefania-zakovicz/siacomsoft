@@ -1,11 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-/* import BirdAnimation from "./Bird"; */
 
 
 const Content = () => {
   return (
-    <div className="absolute top-0 left-0 w-full h-screen flex items-center justify-center z-30">
+    <div className="absolute top-0 left-0 w-full h-screen flex items-center justify-center">
       <div className="w-full h-full flex">
         <div className="w-1/2 flex flex-col mt-60 ml-36">
           <motion.p
@@ -32,8 +31,6 @@ const Content = () => {
             transition={{ delay: 0.1, duration: 1 }}
             className="flex justify-center items-center"
           >
-            
-            {/* <BirdAnimation className="mb-32 mr-28 w-40 h-40" /> */}
           </motion.div>
         </div>
       </div>

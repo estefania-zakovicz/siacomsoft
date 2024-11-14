@@ -1,85 +1,35 @@
-/*ANIMACIÓN DEL VIDEO DE LA COLUMNA IZQUIERDA*/
-
 .grow {
-    transition: transform 0.5s ease, color 0.1s ease;
+  transition: transform 0.5s ease, color 0.1s ease;
 }
 
 .grow:hover {
-    transform: scale3d(1.1, 1.1, 0.3);
+  transform: scale3d(1.1, 1.1, 1);
 }
-
-
-/*ANIMACIÓN DEL TEXTO DE LA COLUMNA DERECHA*/
-/* 
-.tracking-in-expand-fwd-bottom {
-	-webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
-
- @-webkit-keyframes tracking-in-expand-fwd-bottom {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(500px);
-            transform: translateZ(-700px) translateY(500px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0) translateY(0);
-            transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes tracking-in-expand-fwd-bottom {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(500px);
-            transform: translateZ(-700px) translateY(500px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0) translateY(0);
-            transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
-} */
-
-
 
 @keyframes breathe {
   0%, 100% {
-    transform: scale(0.8);
+    transform: scale(0.9); /* Ajuste de escala menor */
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1);
   }
 }
 
 .h2 {
-  
   font-family: "Arima", sans-serif;
   font-weight: 100;
   font-optical-sizing: auto;
-  font-size: 10vw;
-  line-height: 10vw;
+  font-size: 5rem;
+  line-height: 1.2;
   font-variation-settings: 'wght' 100, 'wdth' 85;
 }
 
-
 .h2 .char {
   display: inline-block;
-  animation: breathe 4000ms infinite both;
+  animation: breathe 4s infinite both;
   animation-delay: calc(var(--char-index) * 400ms);
 }
 
 .h2:hover .char {
   animation-play-state: paused;
 }
-
-  

@@ -31,19 +31,17 @@ const Make = () => {
   // Función para dividir el texto en caracteres envueltos en un span
   const renderAnimatedText = (text) => {
     return text.split("").map((char, index) => (
-      
-      <span
-        key={index}
-        className="char"
-        style={{ "--char-index": index }}
-      >
+      <span key={index} className="char" style={{ "--char-index": index }}>
         {char}
       </span>
     ));
   };
 
   return (
-    <div id="second-section make" className="relative w-full h-screen flex items-center justify-center">
+    <div
+      id="second-section"
+      className="relative w-full h-screen flex items-center justify-center"
+    >
       <video
         autoPlay
         loop
@@ -60,7 +58,7 @@ const Make = () => {
           src={videoIa}
         />
       </div>
-      <div className="w-1/2 h-full flex flex-col justify-center text-left z-10">
+      <div className="w-1/2 h-full flex flex-col justify-center text-left z-20">
         <motion.h2
           className="h2 text-white text-7xl mb-2 ml-20"
           initial={{ opacity: 0, y: 50 }}
@@ -91,7 +89,8 @@ const Make = () => {
           transition={{ delay: 2, duration: 1 }}
           className="text-fuxia text-xl font-bold uppercase text-left ml-20"
         >
-          para que puedas concentrarte<br /> en crecer.
+          para que puedas concentrarte
+          <br /> en crecer.
         </motion.p>
       </div>
     </div>

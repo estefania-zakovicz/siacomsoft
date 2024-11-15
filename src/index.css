@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Arima:wght@100..700&family=Dancing+Script:wght@400..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Rowdies:wght@300;400;700&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Arima:wght@100..700&family=Dancing+Script:wght@400..700&family=Forum&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Rowdies:wght@300;400;700&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -10,17 +9,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif; /* Fuente base para todo */
+  font-family: "Forum", serif; /* Fuente base para todo */
 }
 
 h1, h3, h4, h5, h6 {
-  font-family: "Rowdies", sans-serif;
+  font-family: "Forum", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 h2, span{
-  font-family: "Arima", system-ui;
+  font-family: "Forum", serif;
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;

@@ -8,7 +8,7 @@
 
 @keyframes breathe {
   0%, 100% {
-    transform: scale(0.9); /* Ajuste de escala menor */
+    transform: scale(0.8); /* Ajuste de escala menor */
   }
   50% {
     transform: scale(1);
@@ -16,12 +16,10 @@
 }
 
 .h2 {
-  font-family: "Arima", sans-serif;
   font-weight: 100;
   font-optical-sizing: auto;
-  font-size: 5rem;
   line-height: 1.2;
-  font-variation-settings: 'wght' 100, 'wdth' 85;
+  font-variation-settings: 'wght' 300, 'wdth' 85;
 }
 
 .h2 .char {

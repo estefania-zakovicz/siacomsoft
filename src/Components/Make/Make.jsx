@@ -60,7 +60,7 @@ const Make = () => {
       </div>
       <div className="w-1/2 h-full flex flex-col justify-center text-left z-20">
         <motion.h2
-          className="h2 text-white text-7xl mb-2 ml-20"
+          className="h2 text-white text-8xl mb-2 ml-20"
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -68,7 +68,7 @@ const Make = () => {
           {renderAnimatedText("Programas")}
         </motion.h2>
         <motion.h2
-          className="h2 text-white text-7xl mb-2 ml-20"
+          className="h2 text-white text-8xl mb-2 ml-20"
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ delay: 1, duration: 1 }}
@@ -76,7 +76,7 @@ const Make = () => {
           {renderAnimatedText("Sitios Webs")}
         </motion.h2>
         <motion.h2
-          className="h2 text-white text-7xl mb-2 ml-20"
+          className="h2 text-white text-8xl mb-2 ml-20"
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ delay: 1.5, duration: 1 }}
@@ -87,7 +87,7 @@ const Make = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ delay: 2, duration: 1 }}
-          className="text-fuxia text-xl font-bold uppercase text-left ml-20"
+          className="text-fuxia text-2xl font-bold uppercase text-left ml-20 text-shadow-white"
         >
           para que puedas concentrarte
           <br /> en crecer.

@@ -93,7 +93,6 @@ const Header = () => {
           hideAnimation ? "opacity-0" : "opacity-100"
         }`}
       >
-        {/* Contenido de tu animación */}
       </div>
     </Navbar>
   );

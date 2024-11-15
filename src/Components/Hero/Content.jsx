@@ -11,7 +11,7 @@ const Content = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 2 }}
-            className="text-white text-7xl font-semibold mb-2 w-3/4"
+            className="text-white text-8xl font-semibold mb-2 w-3/4"
           >
             Transformamos<br /> la gestión de<br /> tu negocio
           </motion.p>
@@ -19,7 +19,7 @@ const Content = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 3 }}
-            className="text-xl font-bold text-fuxia text-shadow-white uppercase"
+            className="text-2xl font-bold text-fuxia text-shadow-white uppercase"
           >
             con soluciones digitales eficientes.
           </motion.p>

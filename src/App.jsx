@@ -38,7 +38,7 @@ const App = () => {
       <div id="contact" className="h-screen w-full bg-black">
         <Contact />
       </div>
-      <div className="w-full bg-black">
+      <div className="w-full h-auto bg-black">
         <Footer />
       </div>
       

@@ -11,21 +11,21 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { ul } from "framer-motion/client";
-import blessing from "../../assets/Logos/blessing-top.png";
+/* import blessing from "../../assets/Logos/blessing-top.png";
 import mev from "../../assets/Logos/mev-line.png";
 import grosoft from "../../assets/Logos/grosoft-line.png";
 import optica from "../../assets/Logos/opticasoft.png";
 import inecon from "../../assets/Logos/inecon-line.png";
-import trading from "../../assets/Logos/trading.png";
+import trading from "../../assets/Logos/trading.png"; */ /*ESTA SECCION HABILITAR CUANDO TENEMOS LOS VIDEOS DE LOS SOFTWARES LISTOS!*/
 
 const cardData = [
   {
     title: "Programas para Comercios",
-    image: [
+    /*  image: [
       { src: optica, size: "h-12", url: "https://subdominio1.example.com" },
       { src: mev, size: "h-9", url: "https://subdominio2.example.com" },
       { src: inecon, size: "h-10", url: "https://subdominio3.example.com" }
-    ],
+    ], */ /*ESTA SECCION HABILITAR CUANDO TENEMOS LOS VIDEOS DE LOS SOFTWARES LISTOS!*/
     description: (
       <ul className="h2 list-disc text-left text-xl leading-10 ml-5">
         <li>Gestión de Inventario</li>
@@ -43,9 +43,9 @@ const cardData = [
 
   {
     title: "Sitios Webs",
-    image: [
+    /*   image: [
       { src: trading, size: "h-12", url: "https://subdominio4.example.com" }
-    ],
+    ], */ /*ESTA SECCION HABILITAR CUANDO TENEMOS LOS VIDEOS DE LOS SOFTWARES LISTOS!*/
     description: (
       <ul className="h2 list-disc text-left text-xl leading-10 ml-5">
         <li>Catálogo de Productos</li>
@@ -63,9 +63,9 @@ const cardData = [
   },
   {
     title: "Aplicaciones",
-    image: [
+    /*  image: [
       { src: blessing, size: "h-14", url: "https://subdominio5.example.com" }
-    ],
+    ], */ /*ESTA SECCION HABILITAR CUANDO TENEMOS LOS VIDEOS DE LOS SOFTWARES LISTOS!*/
     description: (
       <ul className="h2 list-disc text-left text-xl leading-10 ml-5">
         <li>Interfaz de Usuario Atractiva y Amigable</li>
@@ -91,9 +91,9 @@ const cardData = [
   },
   {
     title: "Programas para Gimnasios",
-    image: [
+    /*  image: [
       { src: grosoft, size: "h-8", url: "https://subdominio6.example.com" }
-    ],
+    ], */ /*ESTA SECCION HABILITAR CUANDO TENEMOS LOS VIDEOS DE LOS SOFTWARES LISTOS!*/
     description: (
       <ul className="h2 list-disc text-left text-xl leading-10 ml-5">
         <li>Gestión de Membresías</li>
@@ -142,9 +142,10 @@ const Cards = () => {
           linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9))`,
         }}
       />
-<h2 className="relative p-20 text-center text-4xl ">Nuestros servicios</h2>
-<section className="flex justify-center items-center gap-8 text-white">
-
+      <h2 className="relative p-20 text-center text-4xl ">
+        Nuestros servicios
+      </h2>
+      <section className="flex justify-center items-center gap-8 text-white">
         {cardData.map((card, index) => (
           <div
             key={index}
@@ -179,10 +180,10 @@ const Cards = () => {
                   {cardData[activeCard].title}
                 </ModalHeader>
                 <ModalBody className="overflow-y-auto max-h-[60vh]">
-                  {cardData[activeCard].description}            
+                  {cardData[activeCard].description}
                 </ModalBody>
                 <ModalFooter>
-                  <div className="flex items-center gap-6 mb-4">
+                  {/*   <div className="flex items-center gap-6 mb-4">
                     {cardData[activeCard].image.map((img, i) => (
                       <div key={i} className="flex flex-col items-center">
                         <a href={img.url} target="_blank" rel="noopener noreferrer">
@@ -195,8 +196,14 @@ const Cards = () => {
                         <span className="text-sm mt-2">{img.subdomain}</span>
                       </div>
                     ))}
-                  </div>
-                  <Button onPress={onClose} className="bg-blue-500 text-white hover:bg-blue-400 ml-4">
+                  </div> */} /*ESTA SECCION HABILITAR CUANDO TENEMOS LOS VIDEOS DE LOS SOFTWARES LISTOS!*/
+                  
+                  <Button
+                    as="a"
+                    href="#contact"
+                    onPress={onClose}
+                    className="bg-blue-500 text-white hover:bg-blue-400 ml-4"
+                  >
                     Solicitar
                   </Button>
                 </ModalFooter>

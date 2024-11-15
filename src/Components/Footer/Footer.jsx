@@ -46,22 +46,22 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white hover:text-fuxia">
+                  <a href="#qué-hacemos" className="text-white hover:text-fuxia">
                     Qué hacemos
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white hover:text-fuxia">
+                  <a href="#beneficios" className="text-white hover:text-fuxia">
                     Beneficios
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white hover:text-fuxia">
-                    Productos
+                  <a href="#servicios" className="text-white hover:text-fuxia">
+                    Servicios
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white hover:text-fuxia">
+                  <a href="#contact" className="text-white hover:text-fuxia">
                     Contacto
                   </a>
                 </li>

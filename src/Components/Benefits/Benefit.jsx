@@ -18,14 +18,14 @@ const Benefit = () => {
     }}
   >
     <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black">
-      <h2 className="pt-20 text-3xl
+      <h2 className="md:pt-24 text-3xl
       lg:pt-20 text-center lg:text-4xl text-white">
         Beneficios al utilizar nuestros servicios
       </h2>
     </div>
       
       {/* Grid principal con espacio entre cuadros */}
-      <div className="grid grid-cols-1 pt-36 gap-5 px-10 lg:grid-cols-4 lg:gap-5 w-full lg:px-10 lg:mt-40 relative z-10">
+      <div className="grid grid-cols-1 md:pt-40 gap-5 px-10 lg:grid-cols-4 lg:gap-5 w-full lg:px-10 lg:mt-40 relative z-10">
 
         <div className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full md:h-48 lg:h-[300px] lg:col-span-2 flex items-center lg:p-4">
           {/* Columna izquierda */}
@@ -46,7 +46,7 @@ const Benefit = () => {
               autoPlay
               loop
               muted
-              className="lg:rounded-md lg:w-[60%] lg:mt-32 lg:ml-10 md:w-20 md:rounded-xl" 
+              className="lg:rounded-md lg:w-[60%] lg:mt-32 md:mr-5 md:w-20 md:rounded-xl" 
               src={svg1}
             />
           </div>
@@ -67,7 +67,7 @@ const Benefit = () => {
               autoPlay
               loop
               muted
-              className="rounded-md lg:w-[90%] lg:mb-20 lg:ml-10 md:w-24 md:ml-64"
+              className="rounded-md lg:w-[90%] lg:mb-20 lg:ml-10 md:w-24 md:ml-28"
               src={svg2}
             />
           </div>

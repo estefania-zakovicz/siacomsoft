@@ -19,7 +19,7 @@ const App = () => {
   return (
     <div className="relative overflow-hidden">
       <Header />
-      <div id="inicio" className="h-screen w-full">
+      <div id="inicio" className="h-auto w-full">
         <Hero_animation onShowContent={handleShowContent} />
         {showContent && <Content />}
       </div>
@@ -32,7 +32,7 @@ const App = () => {
       <div className="h-auto w-full bg-black">
         <Custom />
       </div>
-      <div id="servicios" className="h-screen w-full">
+      <div id="servicios" className="h-auto w-full">
         <Cards />
       </div>
       <div id="contact" className="h-screen w-full bg-black">

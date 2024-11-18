@@ -23,10 +23,10 @@ export default function Footer() {
       />
 
       {/* Footer contenido */}
-      <footer className=" text-white pb-10 pt-32 z-30">
-        <div className="container text-center">
+      <footer className=" text-white pb-10 pt-32 z-30 ">
+        <div className="container text-center ">
           {/* Sección principal en columnas */}
-          <div className="mx-40 grid grid-cols-1 md:grid-cols-3 gap-8  md:text-left">
+          <div className="lg:mx-40 grid grid-cols-1 md:grid-cols-3 lg:gap-8  md:text-left md:mt-32 md:mx-5">
             {/* Acerca de nosotros */}
             <div className="">
               <h2 className="text-xl font-semibold mb-4">Acerca de Nosotros</h2>
@@ -37,7 +37,7 @@ export default function Footer() {
             </div>
 
             {/* Enlaces de navegación */}
-            <div className="ml-40">
+            <div className="md:ml-24">
               <h2 className="text-xl font-semibold mb-4">Enlaces Rápidos</h2>
               <ul>
                 <li>
@@ -69,7 +69,7 @@ export default function Footer() {
             </div>
 
             {/* Información de contacto */}
-            <div className="ml-32">
+            <div className="lg:ml-32 md:ml-20">
               <h2 className="text-xl font-semibold mb-4">Contáctanos</h2>
               <p className="text-white">Email: siacomsoft@gmail.com</p>
 

@@ -23,7 +23,7 @@ export default function FormComponent() {
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen pt-20 p-8 bg-black">
-      <h2 className="text-3xl mb-10 text-center">
+      <h2 className="text-3xl mb-10 text-center md:text-2xl">
         Contactate con nosotros
         <br />
         Escribinos tu mensaje y nos contactaremos a la brevedad para responder tus dudas.
@@ -124,7 +124,7 @@ export default function FormComponent() {
         </div>
 
         {/* Botón Enviar */}
-        <div className="mt-8">
+        <div className="mt-8 md:mt-0">
           <button
             className="w-full py-2 bg-fuxia text-white rounded hover:bg-blue-700"
             type="button"

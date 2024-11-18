@@ -142,18 +142,18 @@ const Cards = () => {
           linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9))`,
         }}
       />
-      <h2 className="relative p-20 text-center text-4xl ">
+      <h2 className="relative md:pt-32 text-center text-3xl ">
         Nuestros servicios
       </h2>
-      <section className="flex justify-center items-center gap-8 text-white">
+      <section className="flex justify-center items-center gap-8 text-white md:mt-10 md:mx-5">
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective rounded-2xl"
+            className="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective rounded-2xl md:h-72 md:w-40 "
           >
             <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000 rounded-2xl">
               <div className="absolute backface-hidden w-full h-full rounded-2xl bg-white/5 backdrop-blur-md flex flex-col items-center justify-center gap-4 p-4 sombra_1">
-                <h2 className="text-3xl font-semibold text-center">
+                <h2 className="lg:text-3xl md:text-xl font-semibold text-center">
                   {card.title}
                 </h2>
 

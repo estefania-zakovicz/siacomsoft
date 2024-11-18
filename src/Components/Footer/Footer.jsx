@@ -69,7 +69,7 @@ export default function Footer() {
             </div>
 
             {/* Información de contacto */}
-            <div className="lg:ml-32 md:ml-20">
+            <div className="lg:ml-20 md:ml-20">
               <h2 className="text-xl font-semibold mb-4">Contáctanos</h2>
               <p className="text-white">Email: siacomsoft@gmail.com</p>
 

@@ -49,7 +49,7 @@ const Header = () => {
         <img
           src={logo}
           alt="Logo"
-          className={`h-10 mr-4 transform transition-opacity duration-700 ${
+          className={`h-10 mr-4 sm:h-8 transform transition-opacity duration-700 ${
             showLogo ? "opacity-100" : "opacity-0"
           }`}
         />
@@ -60,7 +60,7 @@ const Header = () => {
         />
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-6" justify="center">
+      <NavbarContent className="hidden sm:flex gap-6 sm:gap-4" justify="center">
         {menuItems.map((item, index) => {
           const sectionId = item.toLowerCase().replace(/\s+/g, "-");
           return (
@@ -79,7 +79,7 @@ const Header = () => {
           as="a"
           onClick={() => handleLinkClick("contact")}
           radius="full"
-          className="text-base bg-gradient-to-tr from-pink-500 to-blue-500 text-white shadow-lg cursor-pointer z-50"
+          className="text-base bg-gradient-to-tr from-pink-500 to-blue-500 text-white shadow-lg cursor-pointer z-50 sm:text-sm"
         >
           Contactarme
         </Button>

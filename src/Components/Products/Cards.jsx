@@ -149,7 +149,7 @@ const Cards = () => {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective rounded-2xl md:h-72 md:w-40 "
+            className="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective rounded-2xl md:h-72 md:w-40 lg:w-64"
           >
             <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000 rounded-2xl">
               <div className="absolute backface-hidden w-full h-full rounded-2xl bg-white/5 backdrop-blur-md flex flex-col items-center justify-center gap-4 p-4 sombra_1">

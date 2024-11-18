@@ -26,7 +26,7 @@ const App = () => {
       <div id="qué-hacemos" className="h-screen w-full">
         <Make />
       </div>
-      <div id="beneficios" className="relative w-full h-screen bg-black">
+      <div id="beneficios" className="relative w-full h-auto bg-black">
         <Benefit />
       </div>
       <div className="h-auto w-full bg-black">

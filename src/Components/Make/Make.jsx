@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import videoIa from "../../assets/videos/ia.mp4";
-import video from "../../assets/videos/videoAnimad.mp4";
 import "../Make/Animationtext.css";
 
 const Make = () => {
@@ -40,27 +39,20 @@ const Make = () => {
   return (
     <div
       id="second-section"
-      className="relative w-full h-screen flex items-center justify-center"
+      className="relative w-full h-screen flex flex-col lg:flex-row items-center justify-center bg-black"
     >
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute top-0 left-0 w-full h-full object-cover bg-gradient-to-r from-black"
-        src={video}
-      />
-      <div className="w-1/2 h-full flex items-center justify-center">
+      <div className="w-full lg:w-1/2 h-64 lg:h-full flex items-center justify-center px-4 lg:px-0 mt-10 lg:mt-0">
         <video
           autoPlay
           loop
           muted
-          className="relative w-full ml-20 h-96 rounded-md object-cover z-10 grow"
+          className="w-full max-w-lg rounded-md object-cover z-10"
           src={videoIa}
         />
       </div>
-      <div className="w-1/2 h-full flex flex-col justify-center text-left z-20">
+      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-4 lg:px-0 mt-4 lg:mt-0">
         <motion.h2
-          className="h2 text-white text-8xl mb-2 ml-20"
+          className="h2 text-white text-3xl mt-5 lg:text-8xl mb-4"
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -68,7 +60,7 @@ const Make = () => {
           {renderAnimatedText("Programas")}
         </motion.h2>
         <motion.h2
-          className="h2 text-white text-8xl mb-2 ml-20"
+          className="h2 text-white text-3xl lg:text-8xl mb-4"
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ delay: 1, duration: 1 }}
@@ -76,7 +68,7 @@ const Make = () => {
           {renderAnimatedText("Sitios Webs")}
         </motion.h2>
         <motion.h2
-          className="h2 text-white text-8xl mb-2 ml-20"
+          className="h2 text-white text-3xl lg:text-8xl mb-4"
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ delay: 1.5, duration: 1 }}
@@ -87,10 +79,10 @@ const Make = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ delay: 2, duration: 1 }}
-          className="text-fuxia text-2xl font-bold uppercase text-left ml-20 text-shadow-white"
+          className="text-fuxia text-lg lg:text-2xl font-bold uppercase text-shadow-white"
         >
           para que puedas concentrarte
-          <br /> en crecer.
+          <br className="lg:hidden" /> en crecer.
         </motion.p>
       </div>
     </div>

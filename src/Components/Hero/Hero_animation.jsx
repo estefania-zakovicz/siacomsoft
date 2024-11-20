@@ -30,6 +30,8 @@ const Hero_animation = ({ onShowContent }) => {
           backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9))",
         }}
       />
+<div class="hidden lg:block">
+  
 
       {/* Contenido animado */}
       <div className="relative flex items-center justify-center h-full">
@@ -90,6 +92,7 @@ const Hero_animation = ({ onShowContent }) => {
             </div>
           </motion.div>
         </motion.div>
+        </div>
       </div>
     </div>
   );

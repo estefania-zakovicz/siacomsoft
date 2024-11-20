@@ -23,14 +23,14 @@ export default function Footer() {
       />
 
       {/* Footer contenido */}
-      <footer className=" text-white pb-10 pt-32 z-30 ">
+      <footer className=" text-white pt-20 lg:pb-10 lg:pt-32 z-30 ">
         <div className="container text-center ">
           {/* Sección principal en columnas */}
           <div className="lg:mx-40 grid grid-cols-1 md:grid-cols-3 lg:gap-8  md:text-left md:mt-32 md:mx-5">
             {/* Acerca de nosotros */}
             <div className="">
               <h2 className="text-xl font-semibold mb-4">Acerca de Nosotros</h2>
-              <p className="text-white">
+              <p className="text-white px-10">
                 Somos una empresa dedicada a crear soluciones tecnológicas
                 innovadoras para negocios de todos los tamaños.
               </p>
@@ -38,7 +38,7 @@ export default function Footer() {
 
             {/* Enlaces de navegación */}
             <div className="md:ml-24">
-              <h2 className="text-xl font-semibold mb-4">Enlaces Rápidos</h2>
+              <h2 className="text-xl font-semibold mt-6 lg:mb-4">Enlaces Rápidos</h2>
               <ul>
                 <li>
                   <a href="#" className="text-white hover:text-fuxia">
@@ -70,7 +70,7 @@ export default function Footer() {
 
             {/* Información de contacto */}
             <div className="lg:ml-20 md:ml-20">
-              <h2 className="text-xl font-semibold mb-4">Contáctanos</h2>
+              <h2 className="mt-6 text-xl font-semibold lg:mb-4">Contactanos</h2>
               <p className="text-white">Email: siacomsoft@gmail.com</p>
 
               <p className="text-white">Teléfonos:</p>
@@ -133,7 +133,7 @@ export default function Footer() {
           </div>
 
           {/* Derechos reservados */}
-          <div className="mt-10 border-t border-gray-700 pt-6 text-center text-white font-semibold">
+          <div className="mt-10 py-2 border-t border-gray-700 lg:pt-6 text-center text-white font-semibold">
             <p>
               &copy; {new Date().getFullYear()} SiacomSoft. Todos los derechos
               reservados.

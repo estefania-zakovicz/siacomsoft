@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 const Content = () => {
   return (
-    <div className="absolute top-0 left-0 w-full h-screen flex items-center justify-center">
+    <div className="absolute top-0 left-0 w-full flex items-center justify-center">
       <div className="w-full h-full flex flex-col lg:flex-row">
-        <div className="flex flex-col sm:mt-52 sm:ml-32 md:mt-52 md:ml-32 lg:mt-60 lg:ml-36 px-4 lg:px-0">
+        <div className="flex flex-col mt-64 sm:mt-64 md:mt-64 lg:mt-60 lg:ml-36 px-4 lg:px-0">
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 2 }}
-            className="text-white sm:text-5xl lg:text-7xl font-semibold mb-2 w-full lg:w-3/4 md:text-7xl"
+            className="text-white text-5xl text-center sm:text-center sm:text-5xl lg:text-left lg:text-7xl font-semibold mb-2 w-full lg:w-3/4 md:text-7xl"
           >
             Transformamos<br />  <span className="whitespace-nowrap font-semibold">la gestión de</span><br /> tu negocio
           </motion.p>
@@ -18,7 +18,7 @@ const Content = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 3 }}
-            className="text-xl lg:text-2xl font-bold text-fuxia text-shadow-white uppercase"
+            className="text-3xl text-center lg:text-2xl lg:text-left font-bold text-fuxia text-shadow-white uppercase"
           >
             con soluciones digitales eficientes.
           </motion.p>
@@ -30,7 +30,6 @@ const Content = () => {
             transition={{ delay: 0.1, duration: 1 }}
             className="flex justify-center items-center"
           >
-            {/* Aquí puedes agregar contenido adicional si es necesario */}
           </motion.div>
         </div>
       </div>

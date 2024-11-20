@@ -35,7 +35,7 @@ const App = () => {
       <div id="servicios" className="h-auto w-full">
         <Cards />
       </div>
-      <div id="contact" className="h-screen w-full bg-black">
+      <div id="contact" className="h-auto w-full bg-black">
         <Contact />
       </div>
       <div className="w-full h-auto bg-black">

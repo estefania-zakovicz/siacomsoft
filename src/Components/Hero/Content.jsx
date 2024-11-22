@@ -10,7 +10,7 @@ const Content = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 2 }}
-            className="text-white text-5xl text-center sm:text-center sm:text-5xl lg:text-left lg:text-7xl font-semibold mb-2 w-full lg:w-3/4 md:text-7xl"
+            className="text-white text-5xl text-center sm:text-center sm:text-5xl lg:text-left lg:text-7xl font-semibold mb-2 w-full lg:w-3/4 md:text-7xl xl:mt-32 xl:text-9xl"
           >
             Transformamos<br />  <span className="whitespace-nowrap font-semibold">la gestión de</span><br /> tu negocio
           </motion.p>
@@ -18,7 +18,7 @@ const Content = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 3 }}
-            className="text-3xl text-center lg:text-2xl lg:text-left font-bold text-fuxia text-shadow-white uppercase"
+            className="text-3xl text-center lg:text-2xl lg:text-left xl:text-4xl xl:mt-10 font-bold text-fuxia text-shadow-white uppercase"
           >
             con soluciones digitales eficientes.
           </motion.p>

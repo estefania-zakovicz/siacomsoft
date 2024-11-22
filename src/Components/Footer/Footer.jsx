@@ -23,13 +23,13 @@ export default function Footer() {
       />
 
       {/* Footer contenido */}
-      <footer className=" text-white pt-20 lg:pb-10 lg:pt-32 z-30 ">
+      <footer className=" text-white pt-20 lg:pb-10 z-30 ">
         <div className="container text-center ">
           {/* Sección principal en columnas */}
-          <div className="lg:mx-40 grid grid-cols-1 md:grid-cols-3 lg:gap-8  md:text-left md:mt-32 md:mx-5">
+          <div className="lg:mx-auto grid grid-cols-1 md:grid-cols-3 lg:gap-8  md:text-left md:mt-32 md:mx-5">
             {/* Acerca de nosotros */}
             <div className="">
-              <h2 className="text-xl font-semibold mb-4">Acerca de Nosotros</h2>
+              <h2 className="text-xl lg:ml-10 font-semibold mb-4">Acerca de Nosotros</h2>
               <p className="text-white px-10">
                 Somos una empresa dedicada a crear soluciones tecnológicas
                 innovadoras para negocios de todos los tamaños.

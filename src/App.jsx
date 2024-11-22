@@ -8,6 +8,7 @@ import Custom from "./Components/Customers/Custom";
 import Cards from "./Components/Products/Cards";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import Carrusel from "./Components/Benefits/Carrusel";
 
 
 const App = () => {
@@ -23,12 +24,13 @@ const App = () => {
         <Hero_animation onShowContent={handleShowContent} />
         {showContent && <Content />}
       </div>
-      <div id="qué-hacemos" className="h-screen w-full">
+      <div id="qué-hacemos" className="h-auto w-full bg-black">
         <Make />
       </div>
       <div id="beneficios" className="relative w-full h-auto bg-black">
         <Benefit />
       </div>
+     
       <div className="h-auto w-full bg-black">
         <Custom />
       </div>

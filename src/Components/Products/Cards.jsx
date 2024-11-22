@@ -127,7 +127,7 @@ const Cards = () => {
   };
 
   return (
-    <div className="relative h-screen w-full object-fill">
+    <div className="relative h-auto w-full object-fill">
       <video
         src={videoCards}
         autoPlay
@@ -142,25 +142,25 @@ const Cards = () => {
           linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9))`,
         }}
       />
-      <h2 className="relative sm:pt-32  text-center text-3xl pt-10">
+      <h2 className="relative sm:pt-32  text-center text-3xl pt-10 lg:text-4xl">
         Nuestros servicios
       </h2>
       <section className="grid grid-cols-2 gap-6 px-20 justify-center items-center mt-10 text-white sm:gap-8 sm:px-10 md:mt-10 md:mx-5 ">
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="w-48 h-52 bg-transparent cursor-pointer group perspective rounded-2xl sm:w-60 sm:h-60 md:h-72 md:w-72 lg:w-64"
+            className="w-48 h-52 bg-transparent cursor-pointer group perspective rounded-2xl sm:w-60 sm:h-60 md:h-72 md:w-72 lg:w-96 lg:h-96 lg:mt-10 lg:mx-auto"
           >
             <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000 rounded-2xl">
               <div className="absolute backface-hidden w-full h-full rounded-2xl bg-white/5 backdrop-blur-md flex flex-col items-center justify-center gap-4 p-4 sombra_1">
-                <h2 className="lg:text-3xl sm:text-2xl md:text-2xl font-semibold text-center">
+                <h2 className=" lg:text-5xl sm:text-2xl md:text-2xl font-semibold text-center ">
                   {card.title}
                 </h2>
 
                 <Button
                   variant="flat"
                   onPress={() => handleOpen(index)}
-                  className="capitalize bg-blue-600 mt-14 sm:text-xl"
+                  className="capitalize bg-blue-600 mt-14 sm:text-xl lg:text-2xl lg:py-7"
                 >
                   Características
                 </Button>

@@ -22,8 +22,8 @@ export default function FormComponent() {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen p-8 bg-black">
-      <h2 className="text-xl sm:mt-20 lg:text-3xl mb-10 text-center md:text-2xl">
+    <div className="relative flex flex-col items-center  justify-center min-h-screen p-8">
+      <h2 className="text-xl sm:mt-10 lg:text-4xl mb-10 text-center md:text-2xl xl:text-5xl">
         Contactate con nosotros!
         <br />
         Escribinos tu mensaje y nos comunicaremos a la brevedad para despejar tus dudas.
@@ -31,8 +31,8 @@ export default function FormComponent() {
       
       
       
-      <div className="relative flex flex-col w-full max-w-4xl p-4 bg-black rounded-lg pt-18 z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="relative flex flex-col w-full max-w-6xl p-4 bg-black rounded-lg pt-18 z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:text-xl lg:mt-5">
           {/* Columna Izquierda */}
           <div>
             <label className="text-white mb-2 block">Nombre</label>

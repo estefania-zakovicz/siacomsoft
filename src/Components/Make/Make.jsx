@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import videoIa from "../../assets/videos/ia.mp4";
+import videoAnimad from "../../assets/videos/videoAnimad.mp4";
 import "../Make/Animationtext.css";
 
 const Make = () => {
@@ -38,54 +39,66 @@ const Make = () => {
 
   return (
     <div
-      id="second-section"
-      className="relative w-full h-screen flex flex-col lg:flex-row items-center justify-center bg-black"
+  id="second-section"
+  className="relative w-full h-auto flex flex-col lg:flex-row items-center justify-center overflow-hidden"
+>
+  {/* Video de fondo */}
+  <video
+    autoPlay
+    loop
+    muted
+    className="hidden lg:block absolute inset-0 w-full h-full object-cover z-0"
+    src={videoAnimad}
+  />
+
+  {/* Contenido principal */}
+  <div className="w-full lg:w-1/2 flex items-center justify-center px-4 lg:px-5 lg:mt-20 z-10">
+    <video
+      autoPlay
+      loop
+      muted
+      className="w-full max-w-lg rounded-md object-cover"
+      src={videoIa}
+    />
+  </div>
+  <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-4 mt-4 lg:mt-10 z-10">
+
+    <motion.h2
+      className="h2 text-white text-5xl mt-5 lg:text-7xl mb-4 md:text-5xl"
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
+      transition={{ delay: 0.5, duration: 1 }}
     >
-      <div className="w-full lg:w-1/2 lg:h-full flex items-center justify-center px-4 lg:px-5 lg:mt-0">
-        <video
-          autoPlay
-          loop
-          muted
-          className="w-full max-w-lg rounded-md object-cover z-10"
-          src={videoIa}
-        />
-      </div>
-      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-4 mt-4 lg:mt-0">
-        <motion.h2
-          className="h2 text-white text-5xl mt-5 lg:text-7xl mb-4 md:text-5xl"
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
-          {renderAnimatedText("Programas")}
-        </motion.h2>
-        <motion.h2
-          className="h2 text-white text-5xl lg:text-7xl mb-4 md:text-5xl"
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
-          transition={{ delay: 1, duration: 1 }}
-        >
-          {renderAnimatedText("Sitios Webs")}
-        </motion.h2>
-        <motion.h2
-          className="h2 text-white text-5xl lg:text-7xl mb-4 md:text-5xl"
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
-          transition={{ delay: 1.5, duration: 1 }}
-        >
-          {renderAnimatedText("Aplicaciones")}
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
-          transition={{ delay: 2, duration: 1 }}
-          className="text-fuxia text-3xl lg:text-2xl font-bold uppercase text-shadow-white md:text-2xl"
-        >
-          para que puedas concentrarte
-          <br className="lg:hidden" /> en crecer.
-        </motion.p>
-      </div>
-    </div>
+      {renderAnimatedText("Programas")}
+    </motion.h2>
+    <motion.h2
+      className="h2 text-white text-5xl lg:text-7xl mb-4 md:text-5xl"
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
+      transition={{ delay: 1, duration: 1 }}
+    >
+      {renderAnimatedText("Sitios Webs")}
+    </motion.h2>
+    <motion.h2
+      className="h2 text-white text-5xl lg:text-7xl mb-4 md:text-5xl"
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
+      transition={{ delay: 1.5, duration: 1 }}
+    >
+      {renderAnimatedText("Aplicaciones")}
+    </motion.h2>
+    <motion.p
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
+      transition={{ delay: 2, duration: 1 }}
+      className="text-fuxia text-3xl lg:text-2xl font-bold uppercase text-shadow-white md:text-2xl"
+    >
+      para que puedas concentrarte
+      <br className="lg:hidden" /> en crecer.
+    </motion.p>
+  </div>
+</div>
+
   );
 };
 

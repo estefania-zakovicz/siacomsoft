@@ -23,7 +23,7 @@ export default function FormComponent() {
 
   return (
     <div className="relative flex flex-col items-center  justify-center min-h-screen p-8">
-      <h2 className="text-xl sm:mt-10 lg:text-4xl mb-10 text-center md:text-2xl xl:text-5xl">
+      <h2 className="text-xl mt-20 lg:text-4xl mb-10 text-center md:text-2xl xl:text-5xl">
         Contactate con nosotros!
         <br />
         Escribinos tu mensaje y nos comunicaremos a la brevedad para despejar tus dudas.

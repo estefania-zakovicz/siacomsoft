@@ -44,12 +44,12 @@ const Header = () => {
   };
 
   return (
-    <Navbar className="fixed w-full bg-transparent rounded-t-lg z-50">
+    <Navbar className="fixed w-full bg-transparent rounded-t-lg z-50 ">
       <NavbarContent className="flex items-center">
         <img
           src={logo}
           alt="Logo"
-          className={`h-10 mr-4 sm:h-8 transform transition-opacity duration-700 ${
+          className={`h-10 mr-4 sm:h-8 lg:h-14 lg:mt-1 2xl:h-16 2xl:mt-2 transform transition-opacity duration-700 ${
             showLogo ? "opacity-100" : "opacity-0"
           }`}
         />
@@ -60,13 +60,13 @@ const Header = () => {
         />
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-6 sm:gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-6 sm:gap-4 lg:gap-6 " justify="center">
         {menuItems.map((item, index) => {
           const sectionId = item.toLowerCase().replace(/\s+/g, "-");
           return (
             <NavbarMenuItem key={index}>
               <Link
-                className="text-zinc-50 hover:text-fuxia transition-colors duration-300 z-50 cursor-pointer"
+                className="text-zinc-50 hover:text-fuxia transition-colors duration-300 z-50 cursor-pointer lg:text-xl xl:text-2xl 2xl:text-2xl"
                 href={`#${sectionId}`}
                 onClick={() => handleLinkClick(sectionId)}
               >
@@ -79,7 +79,7 @@ const Header = () => {
           as="a"
           onClick={() => handleLinkClick("contact")}
           radius="full"
-          className="text-base bg-gradient-to-tr from-pink-500 to-blue-500 text-white shadow-lg cursor-pointer z-50 sm:text-sm"
+          className="text-base bg-gradient-to-tr from-pink-500 to-blue-500 text-white shadow-lg cursor-pointer z-50 sm:text-sm lg:text-xl xl:text-2xl 2xl:text-3xl"
         >
           Contactarme
         </Button>

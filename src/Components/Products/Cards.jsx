@@ -93,7 +93,8 @@ const cardData = [
     title: "Programas para Gimnasios",
     /*  image: [
       { src: grosoft, size: "h-8", url: "https://subdominio6.example.com" }
-    ], */ /*ESTA SECCION HABILITAR CUANDO TENEMOS LOS VIDEOS DE LOS SOFTWARES LISTOS!*/
+    ],*/ 
+    /*ESTA SECCION HABILITAR CUANDO TENEMOS LOS VIDEOS DE LOS SOFTWARES LISTOS!*/
     description: (
       <ul className="h2 list-disc text-left text-xl leading-10 ml-5">
         <li>Gestión de Membresías</li>
@@ -142,10 +143,10 @@ const Cards = () => {
           linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9))`,
         }}
       />
-      <h2 className="relative sm:pt-32  text-center text-3xl pt-10 lg:text-4xl">
+      <h2 className="relative sm:pt-32  text-center text-3xl pt-10 lg:text-6xl lg:mt-0 lg:pt-5">
         Nuestros servicios
       </h2>
-      <section className="grid grid-cols-2 gap-6 px-20 justify-center items-center mt-10 text-white sm:gap-8 sm:px-10 md:mt-10 md:mx-5 ">
+      <section className="grid grid-cols-2 gap-6 px-10 justify-center items-center mt-10 text-white md:mx-10">
         {cardData.map((card, index) => (
           <div
             key={index}
@@ -196,7 +197,9 @@ const Cards = () => {
                         <span className="text-sm mt-2">{img.subdomain}</span>
                       </div>
                     ))}
-                  </div> */} /*ESTA SECCION HABILITAR CUANDO TENEMOS LOS VIDEOS DE LOS SOFTWARES LISTOS!*/
+                  </div> */}  
+                  
+                 
                   
                   <Button
                     as="a"

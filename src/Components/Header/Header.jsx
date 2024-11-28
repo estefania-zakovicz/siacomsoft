@@ -49,7 +49,7 @@ const Header = () => {
         <img
           src={logo}
           alt="Logo"
-          className={`h-10 mr-4 sm:h-8 lg:h-14 lg:mt-1 2xl:h-16 2xl:mt-2 transform transition-opacity duration-700 ${
+          className={`h-10 mr-4 lg:h-12 lg:mt-1 2xl:h-12 2xl:mt-2 transform transition-opacity duration-700 ${
             showLogo ? "opacity-100" : "opacity-0"
           }`}
         />
@@ -66,7 +66,7 @@ const Header = () => {
           return (
             <NavbarMenuItem key={index}>
               <Link
-                className="text-zinc-50 hover:text-fuxia transition-colors duration-300 z-50 cursor-pointer lg:text-xl xl:text-2xl 2xl:text-2xl"
+                className="text-zinc-50 hover:text-fuxia transition-colors duration-300 z-50 cursor-pointer lg:text-xl xl:text-xl 2xl:text-xl"
                 href={`#${sectionId}`}
                 onClick={() => handleLinkClick(sectionId)}
               >
@@ -79,7 +79,7 @@ const Header = () => {
           as="a"
           onClick={() => handleLinkClick("contact")}
           radius="full"
-          className="text-base bg-gradient-to-tr from-pink-500 to-blue-500 text-white shadow-lg cursor-pointer z-50 sm:text-sm lg:text-xl xl:text-2xl 2xl:text-3xl"
+          className="text-base bg-gradient-to-tr from-pink-500 to-blue-500 text-white shadow-lg cursor-pointer z-50 sm:text-sm lg:text-xl xl:text-xl 2xl:text-xl"
         >
           Contactarme
         </Button>
@@ -115,10 +115,10 @@ const Header = () => {
         </NavbarMenuItem>
       </NavbarMenu>
 
-      {/* Animación: Solo en pantallas grandes */}
+      {/* Animación del logo: Solo en pantallas grandes */}
       <div
         id="animation-element"
-        className={`fixed top-0 left-0 w-full h-64 bg-transparent transition-opacity duration-700 hidden sm:block ${
+        className={`fixed top-0 left-0 w-full  bg-transparent transition-opacity duration-700 hidden sm:block ${
           hideAnimation ? "opacity-0" : "opacity-100"
         }`}
       >

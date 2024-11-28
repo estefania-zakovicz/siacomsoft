@@ -25,19 +25,22 @@ const Benefit = () => {
   const handlePrev = () => setActiveIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
 
   return (
+    /*IMAGEN DE FONDO */
     <div
       className="relative flex items-center justify-center min-h-screen w-full bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: `url(${banner})` }}
     >
+      
       <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black">
-        <h2 className="pt-32 text-3xl md:pt-0 lg:pt-32 text-center justify-center lg:text-5xl text-white">
+     
+        <h2 className="mx-5 pt-32 text-3xl md:pt-20 lg:pt-32 text-center justify-center lg:text-5xl text-white">
           Beneficios al utilizar nuestros servicios
         </h2>
       </div>
 
       {isMobile ? (
-        <div className="relative w-full max-w-4xl mx-10">
-          <div className="overflow-hidden relative h-72 bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full px-2 flex items-center">
+        <div className="relative w-full max-w-4xl mx-10 mt-10">
+          <div className="overflow-hidden relative h-96 mt-20 bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg w-full px-2 flex items-center">
             {slides.map((slide, index) => (
               <div
                 key={index}
@@ -81,11 +84,11 @@ const Benefit = () => {
       ) : (
 
         /*PARTE PARA LG EN ADELANTE */
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-5 md:mt-20 lg:px-10 lg:pt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-5 md:mt-44 lg:px-10 lg:pt-20">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg p-5 flex flex-col items-center lg:h-[110px]:"
+            className="bg-white/10 border-2 border-[#ffffff30] backdrop-blur-md rounded-lg p-5 flex flex-col items-center lg:h-[120px]:"
           >
             <video autoPlay loop muted src={slide.video} className="md:w-24 md:rounded-lg lg:w-28" />
             <h5 className="md:mt-3 md:text-2xl font-bold text-white lg:text-4xl">{slide.label}</h5>

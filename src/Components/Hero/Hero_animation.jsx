@@ -43,14 +43,14 @@ const Hero_animation = ({ onShowContent }) => {
         {/* Contenedor principal ajustado */}
         <motion.div
           className="flex items-center"
-          initial={{ x: 50, y: 500 }} // Inicia en el centro
-          animate={{ x: "-30vh", y: "-10vh", scale: 0.5 }} // Movimiento suave hacia arriba
+          initial={{ x: 50, y: 300 }} // Inicia en el centro
+          animate={{ x: "-60vh", y: "-10vh", scale: 0.5 }} // Movimiento suave hacia arriba
           transition={{
             delay: 2,
-            duration: 3,
+            duration: 2,
             ease: "easeInOut",
             type: "spring",
-            stiffness: 10,
+            stiffness: 15,
             damping: 10,
           }}
         >

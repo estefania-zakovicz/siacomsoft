@@ -40,6 +40,32 @@ const cardData = [
       </ul>
     ),
   },
+  {
+    title: "Programas para Gimnasios",
+    /*  image: [
+      { src: grosoft, size: "h-8", url: "https://subdominio6.example.com" }
+    ],*/ 
+    /*ESTA SECCION HABILITAR CUANDO TENEMOS LOS VIDEOS DE LOS SOFTWARES LISTOS!*/
+    description: (
+      <ul className="h2 list-disc text-left text-xl leading-10 ml-5">
+        <li>Gestión de Membresías</li>
+        <li>Control de Acceso</li>
+        <li>Programación de Clases</li>
+        <li>Reservas en Línea</li>
+        <li>Gestión de Pagos</li>
+        <li>Informes y Análisis</li>
+        <li>Base de Datos de Clientes</li>
+        <li>Seguimiento de Progresos</li>
+        <li>Soporte al Cliente</li>
+        <li>Aplicación Móvil</li>
+        <li>Marketing y Promociones</li>
+        <li>Gestión de Personal</li>
+        <li>Gestión de Inventario</li>
+        <li>Recordatorios Automáticos</li>
+        <li>Seguridad y Privacidad</li>
+      </ul>
+    ),
+  },
 
   {
     title: "Sitios Webs",
@@ -89,32 +115,7 @@ const cardData = [
       </ul>
     ),
   },
-  {
-    title: "Programas para Gimnasios",
-    /*  image: [
-      { src: grosoft, size: "h-8", url: "https://subdominio6.example.com" }
-    ],*/ 
-    /*ESTA SECCION HABILITAR CUANDO TENEMOS LOS VIDEOS DE LOS SOFTWARES LISTOS!*/
-    description: (
-      <ul className="h2 list-disc text-left text-xl leading-10 ml-5">
-        <li>Gestión de Membresías</li>
-        <li>Control de Acceso</li>
-        <li>Programación de Clases</li>
-        <li>Reservas en Línea</li>
-        <li>Gestión de Pagos</li>
-        <li>Informes y Análisis</li>
-        <li>Base de Datos de Clientes</li>
-        <li>Seguimiento de Progresos</li>
-        <li>Soporte al Cliente</li>
-        <li>Aplicación Móvil</li>
-        <li>Marketing y Promociones</li>
-        <li>Gestión de Personal</li>
-        <li>Gestión de Inventario</li>
-        <li>Recordatorios Automáticos</li>
-        <li>Seguridad y Privacidad</li>
-      </ul>
-    ),
-  },
+  
 ];
 
 const Cards = () => {
@@ -143,27 +144,27 @@ const Cards = () => {
           linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9))`,
         }}
       />
-      <h2 className="relative sm:pt-32  text-center text-3xl pt-10 lg:text-6xl lg:mt-0 lg:pt-5">
+      <h2 className="relative text-center text-3xl md:mt-0 lg:text-6xl">
         Nuestros servicios
       </h2>
-      <section className="grid grid-cols-2 gap-6 px-10 justify-center items-center mt-10 text-white md:mx-10">
+      <section className="grid grid-cols-2 gap-6  justify-center items-center mt-20 text-white lg:grid lg:grid-cols-4 lg:gap-1">
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="w-48 h-52 bg-transparent cursor-pointer group perspective rounded-2xl sm:w-60 sm:h-60 md:h-72 md:w-72 lg:w-96 lg:h-96 lg:mt-10 lg:mx-auto"
+            className="w-52 h-44 mx-auto bg-transparent cursor-pointer group perspective rounded-2xl md:h-72 md:w-72 lg:w-56 lg:h-80 lg:mt-10 xl:w-64 xl:h-96 2xl:w-80 2xl:h-96"
           >
             <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000 rounded-2xl">
               <div className="absolute backface-hidden w-full h-full rounded-2xl bg-white/5 backdrop-blur-md flex flex-col items-center justify-center gap-4 p-4 sombra_1">
-                <h2 className=" lg:text-5xl sm:text-2xl md:text-2xl font-semibold text-center ">
+                <h2 className=" text-lg lg:text-3xl  md:text-2xl font-semibold text-center ">
                   {card.title}
                 </h2>
 
                 <Button
                   variant="flat"
                   onPress={() => handleOpen(index)}
-                  className="capitalize bg-blue-600 mt-14 sm:text-xl lg:text-2xl lg:py-7"
+                  className="capitalize bg-fuxia text-md lg:text-2xl lg:py-7"
                 >
-                  Características
+                  Ver
                 </Button>
               </div>
             </div>

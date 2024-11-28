@@ -10,10 +10,11 @@ import trading from "../../assets/Logos/trading.png";
 const Custom = () => {
   return (
     
-      <div className="slider">
-        <div className="luz_3 "></div>
-        <div className="luz_4 "></div>
-        <div className="mb-20 mt-10 text-2xl text-center lg:text-4xl lg:pt-20"><h2>Nuestras Aplicaciones</h2></div>
+      <div className="slider overflow-hidden min-h-screen w-full md:mt-[400px]">
+        <div className="mb-20 mt-44 text-3xl text-center md:mt-44 lg:mt-80 lg:text-4xl">
+          <h2>Nuestras Aplicaciones</h2>
+        </div>
+        
         <div className="slide-track justify-center items-center h-12 grayscale">
             <div className="slide ">
             <img src={blessing} alt="Logo" className="" />
